@@ -2,6 +2,8 @@
 
 **Disclaimer:** These results are *preliminary*. They will need to be verified and validated. But the results are too exciting to be kept private and thus this repository was created to archive the results. Please contact hplin at seas.harvard.edu (Haipeng Lin) with any questions.
 
+![scalability plot](https://raw.githubusercontent.com/jimmielin/wrf-gc-massively-parallel/master/scalability.png "scalability plot")
+
 ## What is this?
 
 This repository contains logs of a massively parallel, thousand-core run of WRF-GC (WRF coupled with GEOS-Chem chemistry, http://wrf.geos-chem.org) on the Amazon Web Services (AWS) Cloud.
