@@ -1,0 +1,3039 @@
+taskid: 3520 hostname: ip-172-31-11-236
+Quilting with   1 groups of   0 I/O tasks.
+ Ntasks in X           64 , ntasks in Y           72
+--- WARNING: traj_opt is zero, but num_traj is not zero; setting num_traj to zero.
+--- NOTE: sst_update is 0, setting io_form_auxinput4 = 0 and auxinput4_interval = 0 for all domains
+--- NOTE: grid_fdda is 0 for domain      1, setting gfdda interval and ending time to 0 for that domain.
+--- NOTE: both grid_sfdda and pxlsm_soil_nudge are 0 for domain      1, setting sgfdda interval and ending time to 0 for that domain.
+--- NOTE: obs_nudge_opt is 0 for domain      1, setting obs nudging interval and ending time to 0 for that domain.
+--- NOTE: bl_pbl_physics /= 4, implies mfshconv must be 0, resetting
+Need MYNN PBL for icloud_bl = 1, resetting to 0
+*************************************
+No physics suite selected.
+Physics options will be used directly from the namelist.
+*************************************
+--- NOTE: RRTMG radiation is in use, setting:  levsiz=59, alevsiz=12, no_src_types=6
+--- NOTE: num_soil_layers has been set to      4
+WRF V3.9.1.1 MODEL
+ *************************************
+ Parent domain
+ ids,ide,jds,jde            1         950           1         650
+ ims,ime,jms,jme           -4          22         490         512
+ ips,ipe,jps,jpe            1          15         497         505
+ *************************************
+DYNAMICS OPTION: Eulerian Mass Coordinate
+   alloc_space_field: domain            1 ,              191393680  bytes allocated
+  med_initialdata_input: calling input_input
+Max map factor in domain 1 =  1.40. Scale the dt in the model accordingly.
+INPUT LandUse = "USGS"
+ LANDUSE TYPE = "USGS" FOUND          33  CATEGORIES           2  SEASONS WATER CATEGORY =           16  SNOW CATEGORY =           24
+INITIALIZE THREE Noah LSM RELATED TABLES
+*****************************************************************
+  __          _______  ______       _____  _____ _    _ _____
+  \ \        / /  __ \|  ____|     / ____|/ ____| |  | |  __ \
+   \ \  /\  / /| |__) | |__ ______| |  __| |    | |__| | |__) |
+    \ \/  \/ / |  _  /|  __|______| | |_ | |    |  __  |  ___/
+     \  /\  /  | | \ \| |         | |__| | |____| |  | | |
+      \/  \/   |_|  \_\_|          \_____|\_____|_|  |_|_|
+*****************************************************************
+         WRF-GC MODEL, VERSION 1811.11 - WRF BINDINGS
+ For errors, suggestions & feedback email linhaipeng@pku.edu.cn
+*****************************************************************
+    This is domain            1
+ ### GIGC_Stateful_Mod: Root CPU, after READ_INPUT_FILE
+  Linoz Data:  O3 climatology :                  z*=10, 12, ..., 58                             2.700E-08 1.083E-05
+  Linoz Data:  Temperature climatology :         z*=10, 12, ..., 58                             1.859E+02 2.904E+02
+  Linoz Data:  Column O3 above box climalology : z*=10, 12, ..., 58                             7.538E-02 3.770E+02
+  Linoz Data:  P-L O3 climatology (mr/s):        z*=10, 12, ..., 58                            -1.590E-10 2.835E-11
+  Linoz Data:  d(P-L)/dO3 (1/s) :                z*=10, 12, ..., 58                            -8.386E-04 7.556E-09
+  Linoz Data:  d(P-L)/dT (mr/K) :                z*=10, 12, ..., 58                            -5.742E-12 4.615E-14
+  Linoz Data:  d(P-L)/d(column O3) (mr/DU) :     z*=10, 12, ..., 58                            -1.921E-12 5.038E-10
+ ### GIGC_Stateful_Mod: Root CPU, after LINOZ_READ
+ %%%%%%%%% GIGC IN-PET GRID SWITCHING HACKS %%%%%%%%%
+     (Not very) Proudly brought to you by hplin      
+ Some debug information:
+ ID:           1
+ IM, JM, LM:          15           9          49  will be set as PAR
+ Allocs: CMN T GC F
+ RC at entry-point:           0
+ %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+ No need to switch HcoState for ID           1
+ Exit RC:            0
+ %%%%%%%%%    FINISHED GIGC_Switch_Dims    %%%%%%%%%
+ GIGC_Chunk_Init: Received new grid IM, JM, LM =          15           9
+          49
+     ### GIGC_INIT_SIMULATION: after Input_Opt% setups
+     ### GIGC_INIT_SIMULATION: after GC_Init_All
+     ### GIGC_INIT_SIMULATION: after GC_Init_Extra
+     ### GIGC_INIT_SIMULATION: after INIT_FJX
+ # GIGC_CHUNK_MOD: after SV save, ID =           1
+ WRFGC chemics_init: Following information regarding Input_Opt% (for all doms)
+ After domain           1
+ HPC:  T
+ LPRT:  F
+ DoConv:  T
+ DoDryDep:  T
+ DoEmis:  T
+ DoChem:  T
+ DoTurb:  T
+ DoWetDep:  T
+
+ tropopause_init: DONE intialized domain            1
+
+ mediation_integrate: med_read_wrf_chem_emissions: Open file wrfchemi_00z_d01
+ HOURLY EMISSIONS UPDATE TIME        0.0       0.0
+mediation_integrate: med_read_wrf_chem_emissions: Read emissions for time 2018-01-01_00:00:00
+open_aux_u : error opening wrffirechemi_d01_2018-01-01_00:00:00 for reading. 100
+open_aux_u : error opening wrfchemi_gocart_bg_d01 for reading. 100
+d01 2018-01-01_00:00:00 Input data processed for aux input   8 for domain   1
+open_aux_u : error opening wrfchemv_d01 for reading. 100
+ Tile Strategy is not specified. Assuming 1D-Y
+WRF TILE   1 IS      1 IE     15 JS    497 JE    505
+WRF NUMBER OF TILES =   1
+ max optd  1.3876131E+35
+ max taucldi  1.3563156E-19
+ max taucldw  0.0000000E+00
+ =================================================
+ W R F - G C   T I M E R S
+    Domain           1 (Units: s)
+ =================================================
+  => Coupler Component                       0.027
+   -- Physics & Parameterization             0.001
+   -- Diagnostics Out                        0.000
+  => GEOS-Chem Column                        0.000
+  ===> Total Chemistry                       0.027
+  => WRF                                     0.000
+  ===> Total WRF-GC                          0.027
+ max optd  1.3876131E+35
+ max taucldi  1.0294716E-14
+ max taucldw  1.0294716E-14
+ %%%%%%%%% GIGC IN-PET GRID SWITCHING HACKS %%%%%%%%%
+     (Not very) Proudly brought to you by hplin      
+ Some debug information:
+ ID:           1
+ IM, JM, LM:          15           9          49  will be set as PAR
+ Allocs: CMN T GC T
+ RC at entry-point:           0
+ %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+ No need to switch HcoState for ID           1
+ Debug HcoState nSpc, NX, NY, NZ         163          15           9          49
+ Exit RC:            0
+ %%%%%%%%%    FINISHED GIGC_Switch_Dims    %%%%%%%%%
+ GIGC_Chunk_Run: Running for in-PET grid #           1
+ GIGC_Chunk_Run: Received new grid IM, JM, LM =          15           9
+          49
+HEMCO: Opening /fsx/HEMCO/BIOFUEL/v2014-07/biofuel.geos.4x5.nc
+HEMCO: Opening /fsx/HEMCO/BROMINE/v2015-02/Bromocarb_Liang2010.nc
+HEMCO: Opening /fsx/HEMCO/ACET/v2014-07/ACET_seawater.generic.1x1.nc
+HEMCO: Opening /fsx/HEMCO/SOILNOX/v2014-07/DepReservoirDefault.nc
+HEMCO: Opening /fsx/HEMCO/SOILNOX/v2014-07/soilNOx.landtype.generic.025x025.1L.nc
+HEMCO: Opening /fsx/HEMCO/SOILNOX/v2014-07/soilNOx.climate.generic.05x05.nc
+HEMCO: Opening /fsx/HEMCO/DUST_DEAD/v2014-07/dst_tibds.geos.4x5.nc
+HEMCO: Opening /fsx/HEMCO/DUST_DEAD/v2014-07/GOCART_src_fn.geos.4x5.nc
+HEMCO: Opening /fsx/HEMCO/MEGAN/v2018-05/MEGAN2.1_EF.geos.025x03125.nc
+HEMCO: Opening /fsx/HEMCO/MEGAN/v2017-07/CLM4_PFT.geos.025x03125.nc
+HEMCO: Opening /fsx/HEMCO/TIMEZONES/v2015-02/timezones_voronoi_1x1.nc
+HEMCO: Opening /fsx/HEMCO/STRAT/v2015-01/Bry/GEOSCCM_Bry.200701.day.nc
+HEMCO: Opening /fsx/HEMCO/STRAT/v2015-01/Bry/GEOSCCM_Bry.200701.night.nc
+HEMCO: Opening /fsx/HEMCO/OMOC/v2018-01/OMOC.DJF.01x01.nc
+HEMCO: Opening /fsx/HEMCO/OMOC/v2018-01/OMOC.MAM.01x01.nc
+HEMCO: Opening /fsx/HEMCO/OMOC/v2018-01/OMOC.JJA.01x01.nc
+HEMCO: Opening /fsx/HEMCO/OMOC/v2018-01/OMOC.SON.01x01.nc
+HEMCO: Opening /fsx/HEMCO/AnnualScalar/v2014-07/AnnualScalar.geos.1x1.nc
+HEMCO: Opening /fsx/HEMCO/EDGARv42/v2015-02/NO/EDGAR_hourly_NOxScal.nc
+HEMCO: Opening /fsx/HEMCO/MASKS/v2018-09/EMEP_mask.geos.1x1.20151222.nc
+HEMCO: Opening /fsx/HEMCO/MASKS/v2018-09/Canada_mask.geos.1x1.nc
+HEMCO: Opening /fsx/HEMCO/MASKS/v2018-09/SE_Asia_mask.generic.1x1.nc
+HEMCO: Opening /fsx/HEMCO/MASKS/v2018-09/MIX_Asia_mask.generic.025x025.nc
+HEMCO: Opening /fsx/HEMCO/MASKS/v2018-09/CONUS_Mask.01x01.nc
+HEMCO: Opening /fsx/HEMCO/MASKS/v2018-09/AF_LANDMASK.geos.05x0666.global.nc
+HEMCO: Opening /fsx/HEMCO/MASKS/v2018-09/China_mask.generic.1x1.nc
+HEMCO: Opening /fsx/HEMCO/MASKS/v2018-09/India_mask.generic.1x1.nc
+HEMCO: Opening /fsx/HEMCO/AnnualScalar/v2014-07/AnnualScalar.geos.1x1.nc
+HEMCO: Opening /fsx/HEMCO/NH3/v2014-07/NH3_geos.4x5.nc
+HEMCO: Opening /fsx/HEMCO/NH3/v2018-04/NH3_Arctic_seabirds.nc
+HEMCO: Opening /fsx/HEMCO/CEDS/v2018-08/2014/NO-em-anthro_CMIP_CEDS_2014.nc
+HEMCO: Opening /fsx/HEMCO/CEDS/v2018-08/2014/CO-em-anthro_CMIP_CEDS_2014.nc
+HEMCO: Opening /fsx/HEMCO/CEDS/v2018-08/2014/SO2-em-anthro_CMIP_CEDS_2014.nc
+HEMCO: Opening /fsx/HEMCO/CEDS/v2018-08/2014/NH3-em-anthro_CMIP_CEDS_2014.nc
+HEMCO: Opening /fsx/HEMCO/CEDS/v2018-08/2014/BC-em-anthro_CMIP_CEDS_2014.nc
+HEMCO: Opening /fsx/HEMCO/CEDS/v2018-08/2014/OC-em-anthro_CMIP_CEDS_2014.nc
+HEMCO: Opening /fsx/HEMCO/CEDS/v2018-08/2014/EOH-em-anthro_CMIP_CEDS_2014.nc
+HEMCO: Opening /fsx/HEMCO/CEDS/v2018-08/2014/C2H6-em-anthro_CMIP_CEDS_2014.nc
+HEMCO: Opening /fsx/HEMCO/CEDS/v2018-08/2014/C3H8-em-anthro_CMIP_CEDS_2014.nc
+HEMCO: Opening /fsx/HEMCO/CEDS/v2018-08/2014/ALK4_butanes-em-anthro_CMIP_CEDS_2014.nc
+HEMCO: Opening /fsx/HEMCO/CEDS/v2018-08/2014/ALK4_pentanes-em-anthro_CMIP_CEDS_2014.nc
+HEMCO: Opening /fsx/HEMCO/CEDS/v2018-08/2014/ALK4_hexanes-em-anthro_CMIP_CEDS_2014.nc
+HEMCO: Opening /fsx/HEMCO/CEDS/v2018-08/2014/PRPE-em-anthro_CMIP_CEDS_2014.nc
+HEMCO: Opening /fsx/HEMCO/CEDS/v2018-08/2014/BENZ-em-anthro_CMIP_CEDS_2014.nc
+HEMCO: Opening /fsx/HEMCO/CEDS/v2018-08/2014/TOLU-em-anthro_CMIP_CEDS_2014.nc
+HEMCO: Opening /fsx/HEMCO/CEDS/v2018-08/2014/XYLE-em-anthro_CMIP_CEDS_2014.nc
+HEMCO: Opening /fsx/HEMCO/CEDS/v2018-08/2014/CH2O-em-anthro_CMIP_CEDS_2014.nc
+HEMCO: Opening /fsx/HEMCO/CEDS/v2018-08/2014/ALD2-em-anthro_CMIP_CEDS_2014.nc
+HEMCO: Opening /fsx/HEMCO/CEDS/v2018-08/2014/MEK-em-anthro_CMIP_CEDS_2014.nc
+HEMCO: Opening /fsx/HEMCO/CEDS/v2018-08/2014/HCOOH-em-anthro_CMIP_CEDS_2014.nc
+HEMCO: Opening /fsx/HEMCO/C2H6_2010/v2017-05/C2H6_global_anth_biof.201001.nc
+HEMCO: Opening /fsx/HEMCO/NEI2011/v2017-02-MM/01/NEI11_0.1x0.1_201101_monmean.nc
+HEMCO: Opening /fsx/HEMCO/NEI2011/v2017-02-MM/01/NEI11_0.1x0.1_201101_monmean_egu.nc
+HEMCO: Opening /fsx/HEMCO/NEI2011/v2017-02-MM/01/NEI11_0.1x0.1_201101_monmean_egupk.nc
+HEMCO: Opening /fsx/HEMCO/NEI2011/v2017-02-MM/01/NEI11_0.1x0.1_201101_monmean_oilgas.nc
+HEMCO: Opening /fsx/HEMCO/NEI2011/v2017-02-MM/01/NEI11_0.1x0.1_201101_monmean_othpt.nc
+HEMCO: Opening /fsx/HEMCO/NEI2011/v2017-02-MM/01/NEI11_0.1x0.1_201101_monmean_ptnonipm.nc
+HEMCO: Opening /fsx/HEMCO/IODINE/v2017-09/CH3I_monthly_emissions_Ordonez_2012_COARDS.nc
+HEMCO: Opening /fsx/HEMCO/IODINE/v2017-09/CH2I2_monthly_emissions_Ordonez_2012_COARDS.nc
+HEMCO: Opening /fsx/HEMCO/IODINE/v2017-09/CH2ICl_monthly_emissions_Ordonez_2012_COARDS.nc
+HEMCO: Opening /fsx/HEMCO/IODINE/v2017-09/CH2IBr_monthly_emissions_Ordonez_2012_COARDS.nc
+HEMCO: Opening /fsx/HEMCO/CEDS/v2018-08/2014/CO-em-anthro_CMIP_CEDS_2014.nc
+HEMCO: Opening /fsx/HEMCO/CEDS/v2018-08/2014/SO2-em-anthro_CMIP_CEDS_2014.nc
+HEMCO: Opening /fsx/HEMCO/CEDS/v2018-08/2014/NH3-em-anthro_CMIP_CEDS_2014.nc
+HEMCO: Opening /fsx/HEMCO/CEDS/v2018-08/2014/BC-em-anthro_CMIP_CEDS_2014.nc
+HEMCO: Opening /fsx/HEMCO/CEDS/v2018-08/2014/OC-em-anthro_CMIP_CEDS_2014.nc
+HEMCO: Opening /fsx/HEMCO/CEDS/v2018-08/2014/EOH-em-anthro_CMIP_CEDS_2014.nc
+HEMCO: Opening /fsx/HEMCO/CEDS/v2018-08/2014/C2H6-em-anthro_CMIP_CEDS_2014.nc
+HEMCO: Opening /fsx/HEMCO/CEDS/v2018-08/2014/C3H8-em-anthro_CMIP_CEDS_2014.nc
+HEMCO: Opening /fsx/HEMCO/CEDS/v2018-08/2014/ALK4_butanes-em-anthro_CMIP_CEDS_2014.nc
+HEMCO: Opening /fsx/HEMCO/CEDS/v2018-08/2014/ALK4_pentanes-em-anthro_CMIP_CEDS_2014.nc
+HEMCO: Opening /fsx/HEMCO/CEDS/v2018-08/2014/ALK4_hexanes-em-anthro_CMIP_CEDS_2014.nc
+HEMCO: Opening /fsx/HEMCO/CEDS/v2018-08/2014/PRPE-em-anthro_CMIP_CEDS_2014.nc
+HEMCO: Opening /fsx/HEMCO/CEDS/v2018-08/2014/BENZ-em-anthro_CMIP_CEDS_2014.nc
+HEMCO: Opening /fsx/HEMCO/CEDS/v2018-08/2014/TOLU-em-anthro_CMIP_CEDS_2014.nc
+HEMCO: Opening /fsx/HEMCO/CEDS/v2018-08/2014/XYLE-em-anthro_CMIP_CEDS_2014.nc
+HEMCO: Opening /fsx/HEMCO/CEDS/v2018-08/2014/CH2O-em-anthro_CMIP_CEDS_2014.nc
+HEMCO: Opening /fsx/HEMCO/CEDS/v2018-08/2014/ALD2-em-anthro_CMIP_CEDS_2014.nc
+HEMCO: Opening /fsx/HEMCO/CEDS/v2018-08/2014/MEK-em-anthro_CMIP_CEDS_2014.nc
+HEMCO: Opening /fsx/HEMCO/CEDS/v2018-08/2014/HCOOH-em-anthro_CMIP_CEDS_2014.nc
+HEMCO: Opening /fsx/HEMCO/CEDS/v2018-08/2014/NO-em-anthro_CMIP_CEDS_2014.nc
+HEMCO: Opening /fsx/HEMCO/AEIC/v2015-01/AEIC.47L.gen.1x1.nc
+HEMCO: Opening /fsx/HEMCO/ALD2/v2017-03/resp.geos.2x25.nc
+HEMCO: Opening /fsx/HEMCO/DMS/v2015-07/DMS_lana.geos.1x1.nc
+HEMCO: Opening /fsx/HEMCO/ALD2/v2017-03/ALD2_seawater.geos.2x25.nc
+HEMCO: Opening /fsx/HEMCO/DUST_DEAD/v2014-07/dst_tvbds.geos.4x5.nc
+HEMCO: Opening /fsx/HEMCO/DUST_DEAD/v2018-04/PM25FINE_ECLIPSE_2015.geos.2x25.nc
+HEMCO: Opening /fsx/HEMCO/SOA/v2014-07/NVOC.geos.1x1.nc
+HEMCO: Opening /fsx/HEMCO/GFED4/v2015-10/2016/GFED4_gen.025x025.201601.nc
+HEMCO: Opening /fsx/HEMCO/UVALBEDO/v2015-03/uvalbedo.geos.2x25.nc
+HEMCO: Opening /fsx/HEMCO/GMI/v2015-02/gmi.clim.ACET.geos5.2x25.nc
+HEMCO: Opening /fsx/HEMCO/GMI/v2015-02/gmi.clim.ACTA.geos5.2x25.nc
+HEMCO: Opening /fsx/HEMCO/GMI/v2015-02/gmi.clim.ALD2.geos5.2x25.nc
+HEMCO: Opening /fsx/HEMCO/GMI/v2015-02/gmi.clim.ALK4.geos5.2x25.nc
+HEMCO: Opening /fsx/HEMCO/GMI/v2015-02/gmi.clim.C2H6.geos5.2x25.nc
+HEMCO: Opening /fsx/HEMCO/GMI/v2015-02/gmi.clim.C3H8.geos5.2x25.nc
+HEMCO: Opening /fsx/HEMCO/GMI/v2015-02/gmi.clim.CCl4.geos5.2x25.nc
+HEMCO: Opening /fsx/HEMCO/GMI/v2015-02/gmi.clim.CF2Cl2.geos5.2x25.nc
+HEMCO: Opening /fsx/HEMCO/GMI/v2015-02/gmi.clim.CF2ClBr.geos5.2x25.nc
+HEMCO: Opening /fsx/HEMCO/GMI/v2015-02/gmi.clim.CFC113.geos5.2x25.nc
+HEMCO: Opening /fsx/HEMCO/GMI/v2015-02/gmi.clim.CFC114.geos5.2x25.nc
+HEMCO: Opening /fsx/HEMCO/GMI/v2015-02/gmi.clim.CFC115.geos5.2x25.nc
+HEMCO: Opening /fsx/HEMCO/GMI/v2015-02/gmi.clim.CFCl3.geos5.2x25.nc
+HEMCO: Opening /fsx/HEMCO/GMI/v2015-02/gmi.clim.CH2O.geos5.2x25.nc
+HEMCO: Opening /fsx/HEMCO/GMI/v2015-02/gmi.clim.CH3CCl3.geos5.2x25.nc
+HEMCO: Opening /fsx/HEMCO/GMI/v2015-02/gmi.clim.CH3Cl.geos5.2x25.nc
+HEMCO: Opening /fsx/HEMCO/GMI/v2015-02/gmi.clim.CH4.geos5.2x25.nc
+HEMCO: Opening /fsx/HEMCO/GMI/v2015-02/gmi.clim.CO.geos5.2x25.nc
+HEMCO: Opening /fsx/HEMCO/GMI/v2015-02/gmi.clim.Cl.geos5.2x25.nc
+HEMCO: Opening /fsx/HEMCO/GMI/v2015-02/gmi.clim.Cl2.geos5.2x25.nc
+HEMCO: Opening /fsx/HEMCO/GMI/v2015-02/gmi.clim.Cl2O2.geos5.2x25.nc
+HEMCO: Opening /fsx/HEMCO/GMI/v2015-02/gmi.clim.ClO.geos5.2x25.nc
+HEMCO: Opening /fsx/HEMCO/GMI/v2015-02/gmi.clim.EOH.geos5.2x25.nc
+HEMCO: Opening /fsx/HEMCO/GMI/v2015-02/gmi.clim.GLYC.geos5.2x25.nc
+HEMCO: Opening /fsx/HEMCO/GMI/v2015-02/gmi.clim.GLYX.geos5.2x25.nc
+HEMCO: Opening /fsx/HEMCO/GMI/v2015-02/gmi.clim.H2402.geos5.2x25.nc
+HEMCO: Opening /fsx/HEMCO/GMI/v2015-02/gmi.clim.H2O.geos5.2x25.nc
+HEMCO: Opening /fsx/HEMCO/GMI/v2015-02/gmi.clim.H2O2.geos5.2x25.nc
+HEMCO: Opening /fsx/HEMCO/GMI/v2015-02/gmi.clim.HAC.geos5.2x25.nc
+HEMCO: Opening /fsx/HEMCO/GMI/v2015-02/gmi.clim.HCFC141b.geos5.2x25.nc
+HEMCO: Opening /fsx/HEMCO/GMI/v2015-02/gmi.clim.HCFC142b.geos5.2x25.nc
+HEMCO: Opening /fsx/HEMCO/GMI/v2015-02/gmi.clim.HCFC22.geos5.2x25.nc
+HEMCO: Opening /fsx/HEMCO/GMI/v2015-02/gmi.clim.HCOOH.geos5.2x25.20170108.nc
+HEMCO: Opening /fsx/HEMCO/GMI/v2015-02/gmi.clim.HCl.geos5.2x25.nc
+HEMCO: Opening /fsx/HEMCO/GMI/v2015-02/gmi.clim.HNO2.geos5.2x25.nc
+HEMCO: Opening /fsx/HEMCO/GMI/v2015-02/gmi.clim.HNO3.geos5.2x25.nc
+HEMCO: Opening /fsx/HEMCO/GMI/v2015-02/gmi.clim.HNO4.geos5.2x25.nc
+HEMCO: Opening /fsx/HEMCO/GMI/v2015-02/gmi.clim.HOCl.geos5.2x25.nc
+HEMCO: Opening /fsx/HEMCO/GMI/v2015-02/gmi.clim.ISN1.geos5.2x25.nc
+HEMCO: Opening /fsx/HEMCO/GMI/v2015-02/gmi.clim.ISOP.geos5.2x25.nc
+HEMCO: Opening /fsx/HEMCO/GMI/v2015-02/gmi.clim.MACR.geos5.2x25.nc
+HEMCO: Opening /fsx/HEMCO/GMI/v2015-02/gmi.clim.MAP.geos5.2x25.nc
+HEMCO: Opening /fsx/HEMCO/GMI/v2015-02/gmi.clim.MEK.geos5.2x25.nc
+HEMCO: Opening /fsx/HEMCO/GMI/v2015-02/gmi.clim.MGLY.geos5.2x25.nc
+HEMCO: Opening /fsx/HEMCO/GMI/v2015-02/gmi.clim.MP.geos5.2x25.nc
+HEMCO: Opening /fsx/HEMCO/GMI/v2015-02/gmi.clim.MVK.geos5.2x25.nc
+HEMCO: Opening /fsx/HEMCO/GMI/v2015-02/gmi.clim.N2O.geos5.2x25.nc
+HEMCO: Opening /fsx/HEMCO/GMI/v2015-02/gmi.clim.N2O5.geos5.2x25.nc
+HEMCO: Opening /fsx/HEMCO/GMI/v2015-02/gmi.clim.NO.geos5.2x25.nc
+HEMCO: Opening /fsx/HEMCO/GMI/v2015-02/gmi.clim.NO2.geos5.2x25.nc
+HEMCO: Opening /fsx/HEMCO/GMI/v2015-02/gmi.clim.NO3.geos5.2x25.nc
+HEMCO: Opening /fsx/HEMCO/GMI/v2015-02/gmi.clim.O3.geos5.2x25.nc
+HEMCO: Opening /fsx/HEMCO/GMI/v2015-02/gmi.clim.OClO.geos5.2x25.nc
+HEMCO: Opening /fsx/HEMCO/GMI/v2015-02/gmi.clim.PAN.geos5.2x25.nc
+HEMCO: Opening /fsx/HEMCO/GMI/v2015-02/gmi.clim.NPMN.geos5.2x25.nc
+HEMCO: Opening /fsx/HEMCO/GMI/v2015-02/gmi.clim.IPMN.geos5.2x25.nc
+HEMCO: Opening /fsx/HEMCO/GMI/v2015-02/gmi.clim.PPN.geos5.2x25.nc
+HEMCO: Opening /fsx/HEMCO/GMI/v2015-02/gmi.clim.PRPE.geos5.2x25.nc
+HEMCO: Opening /fsx/HEMCO/GMI/v2015-02/gmi.clim.R4N2.geos5.2x25.nc
+HEMCO: Opening /fsx/HEMCO/GMI/v2015-02/gmi.clim.RCHO.geos5.2x25.nc
+HEMCO: Opening /fsx/HEMCO/GMI/v2015-02/gmi.clim.RIPA.geos5.2x25.nc
+HEMCO: Opening /fsx/HEMCO/GMI/v2015-02/gmi.clim.RIPB.geos5.2x25.nc
+HEMCO: Opening /fsx/HEMCO/GMI/v2015-02/gmi.clim.RIPD.geos5.2x25.nc
+HEMCO: Opening /fsx/HEMCO/GMI/v2015-02/gmi.clim.OH.geos5.2x25.nc
+HEMCO: Opening /fsx/HEMCO/NOAA_GMD/v2018-01/monthly.gridded.surface.methane.1979-2020.1x1.nc
+HEMCO: Opening /fsx/HEMCO/GEIA/v2014-07/GEIA_monthscal.generic.1x1.nc
+HEMCO: Opening /fsx/HEMCO/EMEP/v2015-03/EMEP.Seasonal.geos.1x1.nc
+HEMCO: Opening /fsx/HEMCO/BROMINE/v2015-02/BromoCarb_Season.nc
+HEMCO: Opening /fsx/HEMCO/EDGARv43/v2016-11/EDGAR_v43.Seasonal.1x1.nc
+HEMCO: Opening /fsx/HEMCO/NEI2005/v2014-09/scaling/NEI99.dow.geos.1x1.nc
+HEMCO: Opening /fsx/HEMCO/VOLCANO/v2015-02/2009/volc_so2_gen.1x1.47L.200901.nc
+HEMCO: Opening /fsx/HEMCO/SOILNOX/v2014-07/soilNOx.fert_res.generic.05x05.nc
+ vdinti: pbl height will be limited to bottom           25  model levels. top is
+     431.250100000000       hpa
+ =================================================
+ W R F - G C   T I M E R S
+    Domain           1 (Units: s)
+ =================================================
+  => Coupler Component                       0.059
+   -- Physics & Parameterization             0.010
+   -- Diagnostics Out                        0.000
+  => GEOS-Chem Column                      120.768
+  ===> Total Chemistry                     120.827
+  => WRF                                    17.404
+  ===> Total WRF-GC                        138.232
+ max optd  1.3876131E+35
+ max taucldi  3.4974383E-07
+ max taucldw  1.9600357E-05
+ Switching is not necessary as we are already
+ in the right domain!
+ GIGC_Chunk_Run: Running for in-PET grid #           1
+ GIGC_Chunk_Run: Received new grid IM, JM, LM =          15           9
+          49
+ =================================================
+ W R F - G C   T I M E R S
+    Domain           1 (Units: s)
+ =================================================
+  => Coupler Component                       0.095
+   -- Physics & Parameterization             0.020
+   -- Diagnostics Out                        0.000
+  => GEOS-Chem Column                      123.210
+  ===> Total Chemistry                     123.306
+  => WRF                                    70.228
+  ===> Total WRF-GC                        193.534
+ max optd  1.3876131E+35
+ max taucldi  7.5754309E-07
+ max taucldw  3.8992519E-05
+ Switching is not necessary as we are already
+ in the right domain!
+ GIGC_Chunk_Run: Running for in-PET grid #           1
+ GIGC_Chunk_Run: Received new grid IM, JM, LM =          15           9
+          49
+ =================================================
+ W R F - G C   T I M E R S
+    Domain           1 (Units: s)
+ =================================================
+  => Coupler Component                       0.129
+   -- Physics & Parameterization             0.030
+   -- Diagnostics Out                        0.000
+  => GEOS-Chem Column                      124.688
+  ===> Total Chemistry                     124.817
+  => WRF                                    89.648
+  ===> Total WRF-GC                        214.465
+ max optd  1.3876131E+35
+ max taucldi  1.2336319E-06
+ max taucldw  5.8198420E-05
+ Switching is not necessary as we are already
+ in the right domain!
+ GIGC_Chunk_Run: Running for in-PET grid #           1
+ GIGC_Chunk_Run: Received new grid IM, JM, LM =          15           9
+          49
+ =================================================
+ W R F - G C   T I M E R S
+    Domain           1 (Units: s)
+ =================================================
+  => Coupler Component                       0.163
+   -- Physics & Parameterization             0.039
+   -- Diagnostics Out                        0.000
+  => GEOS-Chem Column                      126.018
+  ===> Total Chemistry                     126.180
+  => WRF                                   108.249
+  ===> Total WRF-GC                        234.429
+ max optd  1.3876131E+35
+ max taucldi  1.7603854E-06
+ max taucldw  7.7215664E-05
+ Switching is not necessary as we are already
+ in the right domain!
+ GIGC_Chunk_Run: Running for in-PET grid #           1
+ GIGC_Chunk_Run: Received new grid IM, JM, LM =          15           9
+          49
+ =================================================
+ W R F - G C   T I M E R S
+    Domain           1 (Units: s)
+ =================================================
+  => Coupler Component                       0.198
+   -- Physics & Parameterization             0.049
+   -- Diagnostics Out                        0.000
+  => GEOS-Chem Column                      127.303
+  ===> Total Chemistry                     127.501
+  => WRF                                   126.548
+  ===> Total WRF-GC                        254.049
+ max optd  1.3876131E+35
+ max taucldi  2.3522311E-06
+ max taucldw  9.6144810E-05
+ Switching is not necessary as we are already
+ in the right domain!
+ GIGC_Chunk_Run: Running for in-PET grid #           1
+ GIGC_Chunk_Run: Received new grid IM, JM, LM =          15           9
+          49
+ =================================================
+ W R F - G C   T I M E R S
+    Domain           1 (Units: s)
+ =================================================
+  => Coupler Component                       0.231
+   -- Physics & Parameterization             0.058
+   -- Diagnostics Out                        0.000
+  => GEOS-Chem Column                      128.531
+  ===> Total Chemistry                     128.762
+  => WRF                                   144.769
+  ===> Total WRF-GC                        273.531
+ max optd  1.3876131E+35
+ max taucldi  3.0056190E-06
+ max taucldw  1.1488421E-04
+ Switching is not necessary as we are already
+ in the right domain!
+ GIGC_Chunk_Run: Running for in-PET grid #           1
+ GIGC_Chunk_Run: Received new grid IM, JM, LM =          15           9
+          49
+ =================================================
+ W R F - G C   T I M E R S
+    Domain           1 (Units: s)
+ =================================================
+  => Coupler Component                       0.268
+   -- Physics & Parameterization             0.067
+   -- Diagnostics Out                        0.000
+  => GEOS-Chem Column                      129.755
+  ===> Total Chemistry                     130.023
+  => WRF                                   163.045
+  ===> Total WRF-GC                        293.068
+ max optd  1.3876131E+35
+ max taucldi  3.7243617E-06
+ max taucldw  1.3369470E-04
+ Switching is not necessary as we are already
+ in the right domain!
+ GIGC_Chunk_Run: Running for in-PET grid #           1
+ GIGC_Chunk_Run: Received new grid IM, JM, LM =          15           9
+          49
+ =================================================
+ W R F - G C   T I M E R S
+    Domain           1 (Units: s)
+ =================================================
+  => Coupler Component                       0.315
+   -- Physics & Parameterization             0.076
+   -- Diagnostics Out                        0.000
+  => GEOS-Chem Column                      130.958
+  ===> Total Chemistry                     131.274
+  => WRF                                   181.245
+  ===> Total WRF-GC                        312.518
+ max optd  1.3876131E+35
+ max taucldi  4.5919433E-06
+ max taucldw  1.5264511E-04
+ Switching is not necessary as we are already
+ in the right domain!
+ GIGC_Chunk_Run: Running for in-PET grid #           1
+ GIGC_Chunk_Run: Received new grid IM, JM, LM =          15           9
+          49
+ =================================================
+ W R F - G C   T I M E R S
+    Domain           1 (Units: s)
+ =================================================
+  => Coupler Component                       0.349
+   -- Physics & Parameterization             0.085
+   -- Diagnostics Out                        0.000
+  => GEOS-Chem Column                      132.155
+  ===> Total Chemistry                     132.504
+  => WRF                                   199.463
+  ===> Total WRF-GC                        331.967
+ max optd  1.3876131E+35
+ max taucldi  1.5061839E-02
+ max taucldw  1.7112486E-04
+ Switching is not necessary as we are already
+ in the right domain!
+ GIGC_Chunk_Run: Running for in-PET grid #           1
+ GIGC_Chunk_Run: Received new grid IM, JM, LM =          15           9
+          49
+ =================================================
+ W R F - G C   T I M E R S
+    Domain           1 (Units: s)
+ =================================================
+  => Coupler Component                       0.384
+   -- Physics & Parameterization             0.095
+   -- Diagnostics Out                        0.000
+  => GEOS-Chem Column                      133.341
+  ===> Total Chemistry                     133.725
+  => WRF                                   217.741
+  ===> Total WRF-GC                        351.465
+ max optd  1.3876131E+35
+ max taucldi  7.5758204E-02
+ max taucldw  2.0525751E-04
+ Switching is not necessary as we are already
+ in the right domain!
+ GIGC_Chunk_Run: Running for in-PET grid #           1
+ GIGC_Chunk_Run: Received new grid IM, JM, LM =          15           9
+          49
+ =================================================
+ W R F - G C   T I M E R S
+    Domain           1 (Units: s)
+ =================================================
+  => Coupler Component                       0.418
+   -- Physics & Parameterization             0.104
+   -- Diagnostics Out                        0.000
+  => GEOS-Chem Column                      134.531
+  ===> Total Chemistry                     134.949
+  => WRF                                   235.985
+  ===> Total WRF-GC                        370.934
+ max optd  1.3876131E+35
+ max taucldi  0.1255189    
+ max taucldw  2.6211387E-04
+ Switching is not necessary as we are already
+ in the right domain!
+ GIGC_Chunk_Run: Running for in-PET grid #           1
+ GIGC_Chunk_Run: Received new grid IM, JM, LM =          15           9
+          49
+ =================================================
+ W R F - G C   T I M E R S
+    Domain           1 (Units: s)
+ =================================================
+  => Coupler Component                       0.448
+   -- Physics & Parameterization             0.113
+   -- Diagnostics Out                        0.000
+  => GEOS-Chem Column                      135.711
+  ===> Total Chemistry                     136.160
+  => WRF                                   254.090
+  ===> Total WRF-GC                        390.249
+ HOURLY EMISSIONS UPDATE TIME     3600.0       0.0
+mediation_integrate: med_read_wrf_chem_emissions: Read emissions for time 2018-01-01_01:00:00
+ max optd  1.3876131E+35
+ max taucldi  0.1256226    
+ max taucldw  3.3891283E-04
+ Switching is not necessary as we are already
+ in the right domain!
+ GIGC_Chunk_Run: Running for in-PET grid #           1
+ GIGC_Chunk_Run: Received new grid IM, JM, LM =          15           9
+          49
+ =================================================
+ W R F - G C   T I M E R S
+    Domain           1 (Units: s)
+ =================================================
+  => Coupler Component                       0.482
+   -- Physics & Parameterization             0.122
+   -- Diagnostics Out                        0.000
+  => GEOS-Chem Column                      136.887
+  ===> Total Chemistry                     137.369
+  => WRF                                   272.283
+  ===> Total WRF-GC                        409.651
+ max optd  1.3876131E+35
+ max taucldi  7.4324735E-02
+ max taucldw  4.3728092E-04
+ Switching is not necessary as we are already
+ in the right domain!
+ GIGC_Chunk_Run: Running for in-PET grid #           1
+ GIGC_Chunk_Run: Received new grid IM, JM, LM =          15           9
+          49
+ =================================================
+ W R F - G C   T I M E R S
+    Domain           1 (Units: s)
+ =================================================
+  => Coupler Component                       0.514
+   -- Physics & Parameterization             0.131
+   -- Diagnostics Out                        0.000
+  => GEOS-Chem Column                      138.062
+  ===> Total Chemistry                     138.577
+  => WRF                                   290.476
+  ===> Total WRF-GC                        429.053
+ max optd  1.3876131E+35
+ max taucldi  6.5429255E-02
+ max taucldw  5.5693270E-04
+ Switching is not necessary as we are already
+ in the right domain!
+ GIGC_Chunk_Run: Running for in-PET grid #           1
+ GIGC_Chunk_Run: Received new grid IM, JM, LM =          15           9
+          49
+ =================================================
+ W R F - G C   T I M E R S
+    Domain           1 (Units: s)
+ =================================================
+  => Coupler Component                       0.542
+   -- Physics & Parameterization             0.140
+   -- Diagnostics Out                        0.000
+  => GEOS-Chem Column                      139.260
+  ===> Total Chemistry                     139.802
+  => WRF                                   308.555
+  ===> Total WRF-GC                        448.357
+ max optd  1.3876131E+35
+ max taucldi  6.8804465E-02
+ max taucldw  6.9739280E-04
+ Switching is not necessary as we are already
+ in the right domain!
+ GIGC_Chunk_Run: Running for in-PET grid #           1
+ GIGC_Chunk_Run: Received new grid IM, JM, LM =          15           9
+          49
+ =================================================
+ W R F - G C   T I M E R S
+    Domain           1 (Units: s)
+ =================================================
+  => Coupler Component                       0.575
+   -- Physics & Parameterization             0.149
+   -- Diagnostics Out                        0.000
+  => GEOS-Chem Column                      140.370
+  ===> Total Chemistry                     140.945
+  => WRF                                   326.692
+  ===> Total WRF-GC                        467.637
+ max optd  1.3876131E+35
+ max taucldi  4.1277144E-02
+ max taucldw  8.5650122E-04
+ Switching is not necessary as we are already
+ in the right domain!
+ GIGC_Chunk_Run: Running for in-PET grid #           1
+ GIGC_Chunk_Run: Received new grid IM, JM, LM =          15           9
+          49
+ =================================================
+ W R F - G C   T I M E R S
+    Domain           1 (Units: s)
+ =================================================
+  => Coupler Component                       0.612
+   -- Physics & Parameterization             0.158
+   -- Diagnostics Out                        0.000
+  => GEOS-Chem Column                      141.455
+  ===> Total Chemistry                     142.068
+  => WRF                                   344.874
+  ===> Total WRF-GC                        486.942
+ max optd  1.3876131E+35
+ max taucldi  1.6074209E-02
+ max taucldw  1.0279351E-03
+ Switching is not necessary as we are already
+ in the right domain!
+ GIGC_Chunk_Run: Running for in-PET grid #           1
+ GIGC_Chunk_Run: Received new grid IM, JM, LM =          15           9
+          49
+ =================================================
+ W R F - G C   T I M E R S
+    Domain           1 (Units: s)
+ =================================================
+  => Coupler Component                       0.649
+   -- Physics & Parameterization             0.167
+   -- Diagnostics Out                        0.000
+  => GEOS-Chem Column                      142.536
+  ===> Total Chemistry                     143.184
+  => WRF                                   363.038
+  ===> Total WRF-GC                        506.223
+ max optd  1.3876131E+35
+ max taucldi  6.2984629E-03
+ max taucldw  1.2005406E-03
+ Switching is not necessary as we are already
+ in the right domain!
+ GIGC_Chunk_Run: Running for in-PET grid #           1
+ GIGC_Chunk_Run: Received new grid IM, JM, LM =          15           9
+          49
+ =================================================
+ W R F - G C   T I M E R S
+    Domain           1 (Units: s)
+ =================================================
+  => Coupler Component                       0.687
+   -- Physics & Parameterization             0.177
+   -- Diagnostics Out                        0.000
+  => GEOS-Chem Column                      143.611
+  ===> Total Chemistry                     144.298
+  => WRF                                   381.258
+  ===> Total WRF-GC                        525.556
+ max optd  1.3876131E+35
+ max taucldi  3.3996517E-03
+ max taucldw  1.3630154E-03
+ Switching is not necessary as we are already
+ in the right domain!
+ GIGC_Chunk_Run: Running for in-PET grid #           1
+ GIGC_Chunk_Run: Received new grid IM, JM, LM =          15           9
+          49
+ =================================================
+ W R F - G C   T I M E R S
+    Domain           1 (Units: s)
+ =================================================
+  => Coupler Component                       0.724
+   -- Physics & Parameterization             0.186
+   -- Diagnostics Out                        0.000
+  => GEOS-Chem Column                      144.692
+  ===> Total Chemistry                     145.415
+  => WRF                                   399.592
+  ===> Total WRF-GC                        545.007
+ max optd  1.3876131E+35
+ max taucldi  1.6652237E-03
+ max taucldw  1.5037499E-03
+ Switching is not necessary as we are already
+ in the right domain!
+ GIGC_Chunk_Run: Running for in-PET grid #           1
+ GIGC_Chunk_Run: Received new grid IM, JM, LM =          15           9
+          49
+ =================================================
+ W R F - G C   T I M E R S
+    Domain           1 (Units: s)
+ =================================================
+  => Coupler Component                       0.760
+   -- Physics & Parameterization             0.195
+   -- Diagnostics Out                        0.000
+  => GEOS-Chem Column                      145.774
+  ===> Total Chemistry                     146.534
+  => WRF                                   417.664
+  ===> Total WRF-GC                        564.198
+ max optd  1.3876131E+35
+ max taucldi  3.1999691E-04
+ max taucldw  1.6669991E-03
+ Switching is not necessary as we are already
+ in the right domain!
+ GIGC_Chunk_Run: Running for in-PET grid #           1
+ GIGC_Chunk_Run: Received new grid IM, JM, LM =          15           9
+          49
+ =================================================
+ W R F - G C   T I M E R S
+    Domain           1 (Units: s)
+ =================================================
+  => Coupler Component                       0.796
+   -- Physics & Parameterization             0.205
+   -- Diagnostics Out                        0.000
+  => GEOS-Chem Column                      146.864
+  ===> Total Chemistry                     147.660
+  => WRF                                   435.817
+  ===> Total WRF-GC                        583.477
+ max optd  1.3876131E+35
+ max taucldi  1.0378929E-04
+ max taucldw  1.9300710E-03
+ Switching is not necessary as we are already
+ in the right domain!
+ GIGC_Chunk_Run: Running for in-PET grid #           1
+ GIGC_Chunk_Run: Received new grid IM, JM, LM =          15           9
+          49
+ =================================================
+ W R F - G C   T I M E R S
+    Domain           1 (Units: s)
+ =================================================
+  => Coupler Component                       0.832
+   -- Physics & Parameterization             0.214
+   -- Diagnostics Out                        0.000
+  => GEOS-Chem Column                      147.947
+  ===> Total Chemistry                     148.779
+  => WRF                                   454.073
+  ===> Total WRF-GC                        602.852
+ max optd  1.3876131E+35
+ max taucldi  1.2207286E-04
+ max taucldw  2.1683811E-03
+ Switching is not necessary as we are already
+ in the right domain!
+ GIGC_Chunk_Run: Running for in-PET grid #           1
+ GIGC_Chunk_Run: Received new grid IM, JM, LM =          15           9
+          49
+ =================================================
+ W R F - G C   T I M E R S
+    Domain           1 (Units: s)
+ =================================================
+  => Coupler Component                       0.869
+   -- Physics & Parameterization             0.224
+   -- Diagnostics Out                        0.000
+  => GEOS-Chem Column                      149.027
+  ===> Total Chemistry                     149.895
+  => WRF                                   472.221
+  ===> Total WRF-GC                        622.116
+ HOURLY EMISSIONS UPDATE TIME     7200.0       0.0
+mediation_integrate: med_read_wrf_chem_emissions: Read emissions for time 2018-01-01_02:00:00
+ max optd  1.3876131E+35
+ max taucldi  1.3600655E-04
+ max taucldw  2.3074998E-03
+ Switching is not necessary as we are already
+ in the right domain!
+ GIGC_Chunk_Run: Running for in-PET grid #           1
+ GIGC_Chunk_Run: Received new grid IM, JM, LM =          15           9
+          49
+ =================================================
+ W R F - G C   T I M E R S
+    Domain           1 (Units: s)
+ =================================================
+  => Coupler Component                       0.904
+   -- Physics & Parameterization             0.233
+   -- Diagnostics Out                        0.000
+  => GEOS-Chem Column                      150.111
+  ===> Total Chemistry                     151.015
+  => WRF                                   490.400
+  ===> Total WRF-GC                        641.415
+ max optd  1.3876131E+35
+ max taucldi  2.7870966E-02
+ max taucldw  2.3000066E-03
+ Switching is not necessary as we are already
+ in the right domain!
+ GIGC_Chunk_Run: Running for in-PET grid #           1
+ GIGC_Chunk_Run: Received new grid IM, JM, LM =          15           9
+          49
+ =================================================
+ W R F - G C   T I M E R S
+    Domain           1 (Units: s)
+ =================================================
+  => Coupler Component                       0.941
+   -- Physics & Parameterization             0.242
+   -- Diagnostics Out                        0.000
+  => GEOS-Chem Column                      151.194
+  ===> Total Chemistry                     152.135
+  => WRF                                   508.591
+  ===> Total WRF-GC                        660.727
+ max optd  1.3876131E+35
+ max taucldi  7.0351705E-02
+ max taucldw  2.1895773E-03
+ Switching is not necessary as we are already
+ in the right domain!
+ GIGC_Chunk_Run: Running for in-PET grid #           1
+ GIGC_Chunk_Run: Received new grid IM, JM, LM =          15           9
+          49
+ =================================================
+ W R F - G C   T I M E R S
+    Domain           1 (Units: s)
+ =================================================
+  => Coupler Component                       0.991
+   -- Physics & Parameterization             0.252
+   -- Diagnostics Out                        0.000
+  => GEOS-Chem Column                      152.235
+  ===> Total Chemistry                     153.226
+  => WRF                                   526.663
+  ===> Total WRF-GC                        679.889
+ max optd  1.3876131E+35
+ max taucldi  5.7663579E-02
+ max taucldw  2.0515593E-03
+ Switching is not necessary as we are already
+ in the right domain!
+ GIGC_Chunk_Run: Running for in-PET grid #           1
+ GIGC_Chunk_Run: Received new grid IM, JM, LM =          15           9
+          49
+ =================================================
+ W R F - G C   T I M E R S
+    Domain           1 (Units: s)
+ =================================================
+  => Coupler Component                       1.030
+   -- Physics & Parameterization             0.262
+   -- Diagnostics Out                        0.000
+  => GEOS-Chem Column                      153.321
+  ===> Total Chemistry                     154.350
+  => WRF                                   544.791
+  ===> Total WRF-GC                        699.142
+ max optd  1.3876131E+35
+ max taucldi  5.2032068E-02
+ max taucldw  1.9734935E-03
+ Switching is not necessary as we are already
+ in the right domain!
+ GIGC_Chunk_Run: Running for in-PET grid #           1
+ GIGC_Chunk_Run: Received new grid IM, JM, LM =          15           9
+          49
+ =================================================
+ W R F - G C   T I M E R S
+    Domain           1 (Units: s)
+ =================================================
+  => Coupler Component                       1.066
+   -- Physics & Parameterization             0.271
+   -- Diagnostics Out                        0.000
+  => GEOS-Chem Column                      154.405
+  ===> Total Chemistry                     155.470
+  => WRF                                   562.900
+  ===> Total WRF-GC                        718.371
+ max optd  1.3876131E+35
+ max taucldi  3.8920861E-02
+ max taucldw  1.9352800E-03
+ Switching is not necessary as we are already
+ in the right domain!
+ GIGC_Chunk_Run: Running for in-PET grid #           1
+ GIGC_Chunk_Run: Received new grid IM, JM, LM =          15           9
+          49
+ =================================================
+ W R F - G C   T I M E R S
+    Domain           1 (Units: s)
+ =================================================
+  => Coupler Component                       1.103
+   -- Physics & Parameterization             0.280
+   -- Diagnostics Out                        0.000
+  => GEOS-Chem Column                      155.486
+  ===> Total Chemistry                     156.588
+  => WRF                                   581.010
+  ===> Total WRF-GC                        737.599
+ max optd  1.3876131E+35
+ max taucldi  4.4105195E-02
+ max taucldw  1.8904282E-03
+ Switching is not necessary as we are already
+ in the right domain!
+ GIGC_Chunk_Run: Running for in-PET grid #           1
+ GIGC_Chunk_Run: Received new grid IM, JM, LM =          15           9
+          49
+ =================================================
+ W R F - G C   T I M E R S
+    Domain           1 (Units: s)
+ =================================================
+  => Coupler Component                       1.145
+   -- Physics & Parameterization             0.289
+   -- Diagnostics Out                        0.000
+  => GEOS-Chem Column                      156.558
+  ===> Total Chemistry                     157.703
+  => WRF                                   599.116
+  ===> Total WRF-GC                        756.819
+ max optd  1.3876131E+35
+ max taucldi  5.1024027E-02
+ max taucldw  1.8288518E-03
+ Switching is not necessary as we are already
+ in the right domain!
+ GIGC_Chunk_Run: Running for in-PET grid #           1
+ GIGC_Chunk_Run: Received new grid IM, JM, LM =          15           9
+          49
+ =================================================
+ W R F - G C   T I M E R S
+    Domain           1 (Units: s)
+ =================================================
+  => Coupler Component                       1.183
+   -- Physics & Parameterization             0.299
+   -- Diagnostics Out                        0.000
+  => GEOS-Chem Column                      157.637
+  ===> Total Chemistry                     158.820
+  => WRF                                   617.185
+  ===> Total WRF-GC                        776.005
+ max optd  1.3876131E+35
+ max taucldi  6.4327694E-02
+ max taucldw  1.7509809E-03
+ Switching is not necessary as we are already
+ in the right domain!
+ GIGC_Chunk_Run: Running for in-PET grid #           1
+ GIGC_Chunk_Run: Received new grid IM, JM, LM =          15           9
+          49
+ =================================================
+ W R F - G C   T I M E R S
+    Domain           1 (Units: s)
+ =================================================
+  => Coupler Component                       1.220
+   -- Physics & Parameterization             0.308
+   -- Diagnostics Out                        0.000
+  => GEOS-Chem Column                      158.713
+  ===> Total Chemistry                     159.933
+  => WRF                                   635.253
+  ===> Total WRF-GC                        795.186
+ max optd  1.3876131E+35
+ max taucldi  7.9604916E-02
+ max taucldw  1.7054967E-03
+ Switching is not necessary as we are already
+ in the right domain!
+ GIGC_Chunk_Run: Running for in-PET grid #           1
+ GIGC_Chunk_Run: Received new grid IM, JM, LM =          15           9
+          49
+ =================================================
+ W R F - G C   T I M E R S
+    Domain           1 (Units: s)
+ =================================================
+  => Coupler Component                       1.257
+   -- Physics & Parameterization             0.317
+   -- Diagnostics Out                        0.000
+  => GEOS-Chem Column                      159.788
+  ===> Total Chemistry                     161.046
+  => WRF                                   653.389
+  ===> Total WRF-GC                        814.435
+ max optd  1.3876131E+35
+ max taucldi  8.3718330E-02
+ max taucldw  1.6597364E-03
+ Switching is not necessary as we are already
+ in the right domain!
+ GIGC_Chunk_Run: Running for in-PET grid #           1
+ GIGC_Chunk_Run: Received new grid IM, JM, LM =          15           9
+          49
+ =================================================
+ W R F - G C   T I M E R S
+    Domain           1 (Units: s)
+ =================================================
+  => Coupler Component                       1.294
+   -- Physics & Parameterization             0.326
+   -- Diagnostics Out                        0.000
+  => GEOS-Chem Column                      160.866
+  ===> Total Chemistry                     162.160
+  => WRF                                   671.422
+  ===> Total WRF-GC                        833.582
+ max optd  1.3876131E+35
+ max taucldi  9.8853715E-02
+ max taucldw  1.6092107E-03
+ Switching is not necessary as we are already
+ in the right domain!
+ GIGC_Chunk_Run: Running for in-PET grid #           1
+ GIGC_Chunk_Run: Received new grid IM, JM, LM =          15           9
+          49
+ =================================================
+ W R F - G C   T I M E R S
+    Domain           1 (Units: s)
+ =================================================
+  => Coupler Component                       1.331
+   -- Physics & Parameterization             0.335
+   -- Diagnostics Out                        0.000
+  => GEOS-Chem Column                      161.940
+  ===> Total Chemistry                     163.272
+  => WRF                                   689.477
+  ===> Total WRF-GC                        852.749
+ HOURLY EMISSIONS UPDATE TIME    10800.0       0.0
+mediation_integrate: med_read_wrf_chem_emissions: Read emissions for time 2018-01-01_03:00:00
+ max optd  1.3876131E+35
+ max taucldi  9.1570973E-02
+ max taucldw  1.5638110E-03
+ Switching is not necessary as we are already
+ in the right domain!
+ GIGC_Chunk_Run: Running for in-PET grid #           1
+ GIGC_Chunk_Run: Received new grid IM, JM, LM =          15           9
+          49
+ =================================================
+ W R F - G C   T I M E R S
+    Domain           1 (Units: s)
+ =================================================
+  => Coupler Component                       1.372
+   -- Physics & Parameterization             0.345
+   -- Diagnostics Out                        0.000
+  => GEOS-Chem Column                      163.019
+  ===> Total Chemistry                     164.391
+  => WRF                                   707.588
+  ===> Total WRF-GC                        871.979
+ max optd  1.3876131E+35
+ max taucldi  7.1385719E-02
+ max taucldw  1.5318077E-03
+ Switching is not necessary as we are already
+ in the right domain!
+ GIGC_Chunk_Run: Running for in-PET grid #           1
+ GIGC_Chunk_Run: Received new grid IM, JM, LM =          15           9
+          49
+ =================================================
+ W R F - G C   T I M E R S
+    Domain           1 (Units: s)
+ =================================================
+  => Coupler Component                       1.411
+   -- Physics & Parameterization             0.354
+   -- Diagnostics Out                        0.000
+  => GEOS-Chem Column                      164.098
+  ===> Total Chemistry                     165.509
+  => WRF                                   725.649
+  ===> Total WRF-GC                        891.159
+ max optd  1.3876131E+35
+ max taucldi  6.6376701E-02
+ max taucldw  1.5159489E-03
+ Switching is not necessary as we are already
+ in the right domain!
+ GIGC_Chunk_Run: Running for in-PET grid #           1
+ GIGC_Chunk_Run: Received new grid IM, JM, LM =          15           9
+          49
+ =================================================
+ W R F - G C   T I M E R S
+    Domain           1 (Units: s)
+ =================================================
+  => Coupler Component                       1.450
+   -- Physics & Parameterization             0.363
+   -- Diagnostics Out                        0.000
+  => GEOS-Chem Column                      165.157
+  ===> Total Chemistry                     166.607
+  => WRF                                   743.711
+  ===> Total WRF-GC                        910.318
+ max optd  1.3876131E+35
+ max taucldi  9.1788426E-02
+ max taucldw  1.5148994E-03
+ Switching is not necessary as we are already
+ in the right domain!
+ GIGC_Chunk_Run: Running for in-PET grid #           1
+ GIGC_Chunk_Run: Received new grid IM, JM, LM =          15           9
+          49
+ =================================================
+ W R F - G C   T I M E R S
+    Domain           1 (Units: s)
+ =================================================
+  => Coupler Component                       1.488
+   -- Physics & Parameterization             0.372
+   -- Diagnostics Out                        0.000
+  => GEOS-Chem Column                      166.231
+  ===> Total Chemistry                     167.720
+  => WRF                                   761.801
+  ===> Total WRF-GC                        929.521
+ max optd  1.3876131E+35
+ max taucldi  0.1023454    
+ max taucldw  1.5235401E-03
+ Switching is not necessary as we are already
+ in the right domain!
+ GIGC_Chunk_Run: Running for in-PET grid #           1
+ GIGC_Chunk_Run: Received new grid IM, JM, LM =          15           9
+          49
+ =================================================
+ W R F - G C   T I M E R S
+    Domain           1 (Units: s)
+ =================================================
+  => Coupler Component                       1.525
+   -- Physics & Parameterization             0.381
+   -- Diagnostics Out                        0.000
+  => GEOS-Chem Column                      167.307
+  ===> Total Chemistry                     168.832
+  => WRF                                   779.854
+  ===> Total WRF-GC                        948.685
+ max optd  1.3876131E+35
+ max taucldi  8.6284459E-02
+ max taucldw  1.5370282E-03
+ Switching is not necessary as we are already
+ in the right domain!
+ GIGC_Chunk_Run: Running for in-PET grid #           1
+ GIGC_Chunk_Run: Received new grid IM, JM, LM =          15           9
+          49
+ =================================================
+ W R F - G C   T I M E R S
+    Domain           1 (Units: s)
+ =================================================
+  => Coupler Component                       1.562
+   -- Physics & Parameterization             0.390
+   -- Diagnostics Out                        0.000
+  => GEOS-Chem Column                      168.386
+  ===> Total Chemistry                     169.948
+  => WRF                                   798.183
+  ===> Total WRF-GC                        968.131
+ max optd  1.3876131E+35
+ max taucldi  7.5273916E-02
+ max taucldw  1.5528015E-03
+ Switching is not necessary as we are already
+ in the right domain!
+ GIGC_Chunk_Run: Running for in-PET grid #           1
+ GIGC_Chunk_Run: Received new grid IM, JM, LM =          15           9
+          49
+ =================================================
+ W R F - G C   T I M E R S
+    Domain           1 (Units: s)
+ =================================================
+  => Coupler Component                       1.598
+   -- Physics & Parameterization             0.400
+   -- Diagnostics Out                        0.000
+  => GEOS-Chem Column                      169.469
+  ===> Total Chemistry                     171.066
+  => WRF                                   816.331
+  ===> Total WRF-GC                        987.397
+ max optd  1.3876131E+35
+ max taucldi  5.5482145E-02
+ max taucldw  1.5689923E-03
+ Switching is not necessary as we are already
+ in the right domain!
+ GIGC_Chunk_Run: Running for in-PET grid #           1
+ GIGC_Chunk_Run: Received new grid IM, JM, LM =          15           9
+          49
+ =================================================
+ W R F - G C   T I M E R S
+    Domain           1 (Units: s)
+ =================================================
+  => Coupler Component                       1.635
+   -- Physics & Parameterization             0.409
+   -- Diagnostics Out                        0.000
+  => GEOS-Chem Column                      170.547
+  ===> Total Chemistry                     172.182
+  => WRF                                   834.327
+  ===> Total WRF-GC                       1006.508
+ max optd  1.3876131E+35
+ max taucldi  2.3738295E-02
+ max taucldw  1.6038719E-03
+ Switching is not necessary as we are already
+ in the right domain!
+ GIGC_Chunk_Run: Running for in-PET grid #           1
+ GIGC_Chunk_Run: Received new grid IM, JM, LM =          15           9
+          49
+ =================================================
+ W R F - G C   T I M E R S
+    Domain           1 (Units: s)
+ =================================================
+  => Coupler Component                       1.672
+   -- Physics & Parameterization             0.418
+   -- Diagnostics Out                        0.000
+  => GEOS-Chem Column                      171.631
+  ===> Total Chemistry                     173.303
+  => WRF                                   852.530
+  ===> Total WRF-GC                       1025.833
+ max optd  1.3876131E+35
+ max taucldi  1.6600585E-03
+ max taucldw  1.6471571E-03
+ Switching is not necessary as we are already
+ in the right domain!
+ GIGC_Chunk_Run: Running for in-PET grid #           1
+ GIGC_Chunk_Run: Received new grid IM, JM, LM =          15           9
+          49
+ =================================================
+ W R F - G C   T I M E R S
+    Domain           1 (Units: s)
+ =================================================
+  => Coupler Component                       1.708
+   -- Physics & Parameterization             0.427
+   -- Diagnostics Out                        0.000
+  => GEOS-Chem Column                      172.714
+  ===> Total Chemistry                     174.422
+  => WRF                                   870.643
+  ===> Total WRF-GC                       1045.065
+ max optd  1.3876131E+35
+ max taucldi  1.7763693E-04
+ max taucldw  1.6797092E-03
+ Switching is not necessary as we are already
+ in the right domain!
+ GIGC_Chunk_Run: Running for in-PET grid #           1
+ GIGC_Chunk_Run: Received new grid IM, JM, LM =          15           9
+          49
+ =================================================
+ W R F - G C   T I M E R S
+    Domain           1 (Units: s)
+ =================================================
+  => Coupler Component                       1.745
+   -- Physics & Parameterization             0.437
+   -- Diagnostics Out                        0.000
+  => GEOS-Chem Column                      173.800
+  ===> Total Chemistry                     175.545
+  => WRF                                   888.707
+  ===> Total WRF-GC                       1064.252
+ max optd  1.3876131E+35
+ max taucldi  1.8272478E-04
+ max taucldw  1.7013007E-03
+ Switching is not necessary as we are already
+ in the right domain!
+ GIGC_Chunk_Run: Running for in-PET grid #           1
+ GIGC_Chunk_Run: Received new grid IM, JM, LM =          15           9
+          49
+ =================================================
+ W R F - G C   T I M E R S
+    Domain           1 (Units: s)
+ =================================================
+  => Coupler Component                       1.782
+   -- Physics & Parameterization             0.446
+   -- Diagnostics Out                        0.000
+  => GEOS-Chem Column                      174.883
+  ===> Total Chemistry                     176.665
+  => WRF                                   906.828
+  ===> Total WRF-GC                       1083.493
+ HOURLY EMISSIONS UPDATE TIME    14400.0       0.0
+mediation_integrate: med_read_wrf_chem_emissions: Read emissions for time 2018-01-01_04:00:00
+ max optd  1.3876131E+35
+ max taucldi  1.8660029E-04
+ max taucldw  1.7118261E-03
+ Switching is not necessary as we are already
+ in the right domain!
+ GIGC_Chunk_Run: Running for in-PET grid #           1
+ GIGC_Chunk_Run: Received new grid IM, JM, LM =          15           9
+          49
+ =================================================
+ W R F - G C   T I M E R S
+    Domain           1 (Units: s)
+ =================================================
+  => Coupler Component                       1.822
+   -- Physics & Parameterization             0.456
+   -- Diagnostics Out                        0.000
+  => GEOS-Chem Column                      175.961
+  ===> Total Chemistry                     177.783
+  => WRF                                   924.933
+  ===> Total WRF-GC                       1102.716
+ max optd  1.3876131E+35
+ max taucldi  1.9030654E-04
+ max taucldw  1.7114212E-03
+ Switching is not necessary as we are already
+ in the right domain!
+ GIGC_Chunk_Run: Running for in-PET grid #           1
+ GIGC_Chunk_Run: Received new grid IM, JM, LM =          15           9
+          49
+ =================================================
+ W R F - G C   T I M E R S
+    Domain           1 (Units: s)
+ =================================================
+  => Coupler Component                       1.860
+   -- Physics & Parameterization             0.465
+   -- Diagnostics Out                        0.000
+  => GEOS-Chem Column                      177.042
+  ===> Total Chemistry                     178.902
+  => WRF                                   943.044
+  ===> Total WRF-GC                       1121.946
+ max optd  1.3876131E+35
+ max taucldi  1.9415186E-04
+ max taucldw  1.7059576E-03
+ Switching is not necessary as we are already
+ in the right domain!
+ GIGC_Chunk_Run: Running for in-PET grid #           1
+ GIGC_Chunk_Run: Received new grid IM, JM, LM =          15           9
+          49
+ =================================================
+ W R F - G C   T I M E R S
+    Domain           1 (Units: s)
+ =================================================
+  => Coupler Component                       1.895
+   -- Physics & Parameterization             0.474
+   -- Diagnostics Out                        0.000
+  => GEOS-Chem Column                      178.124
+  ===> Total Chemistry                     180.020
+  => WRF                                   961.235
+  ===> Total WRF-GC                       1141.255
+ max optd  1.3876131E+35
+ max taucldi  1.9788610E-04
+ max taucldw  1.6977389E-03
+ Switching is not necessary as we are already
+ in the right domain!
+ GIGC_Chunk_Run: Running for in-PET grid #           1
+ GIGC_Chunk_Run: Received new grid IM, JM, LM =          15           9
+          49
+ =================================================
+ W R F - G C   T I M E R S
+    Domain           1 (Units: s)
+ =================================================
+  => Coupler Component                       1.932
+   -- Physics & Parameterization             0.484
+   -- Diagnostics Out                        0.000
+  => GEOS-Chem Column                      179.207
+  ===> Total Chemistry                     181.139
+  => WRF                                   979.327
+  ===> Total WRF-GC                       1160.466
+ max optd  1.3876131E+35
+ max taucldi  2.0043597E-04
+ max taucldw  1.6887609E-03
+ Switching is not necessary as we are already
+ in the right domain!
+ GIGC_Chunk_Run: Running for in-PET grid #           1
+ GIGC_Chunk_Run: Received new grid IM, JM, LM =          15           9
+          49
+ =================================================
+ W R F - G C   T I M E R S
+    Domain           1 (Units: s)
+ =================================================
+  => Coupler Component                       1.967
+   -- Physics & Parameterization             0.493
+   -- Diagnostics Out                        0.000
+  => GEOS-Chem Column                      180.300
+  ===> Total Chemistry                     182.267
+  => WRF                                   997.448
+  ===> Total WRF-GC                       1179.715
+ max optd  1.3876131E+35
+ max taucldi  2.0434879E-04
+ max taucldw  1.6808574E-03
+ Switching is not necessary as we are already
+ in the right domain!
+ GIGC_Chunk_Run: Running for in-PET grid #           1
+ GIGC_Chunk_Run: Received new grid IM, JM, LM =          15           9
+          49
+ =================================================
+ W R F - G C   T I M E R S
+    Domain           1 (Units: s)
+ =================================================
+  => Coupler Component                       2.003
+   -- Physics & Parameterization             0.502
+   -- Diagnostics Out                        0.000
+  => GEOS-Chem Column                      181.381
+  ===> Total Chemistry                     183.384
+  => WRF                                  1015.557
+  ===> Total WRF-GC                       1198.942
+ max optd  1.3876131E+35
+ max taucldi  2.0725837E-04
+ max taucldw  1.6749282E-03
+ Switching is not necessary as we are already
+ in the right domain!
+ GIGC_Chunk_Run: Running for in-PET grid #           1
+ GIGC_Chunk_Run: Received new grid IM, JM, LM =          15           9
+          49
+ =================================================
+ W R F - G C   T I M E R S
+    Domain           1 (Units: s)
+ =================================================
+  => Coupler Component                       2.042
+   -- Physics & Parameterization             0.511
+   -- Diagnostics Out                        0.000
+  => GEOS-Chem Column                      182.462
+  ===> Total Chemistry                     184.503
+  => WRF                                  1033.723
+  ===> Total WRF-GC                       1218.227
+ max optd  1.3876131E+35
+ max taucldi  2.1136309E-04
+ max taucldw  1.6722683E-03
+ Switching is not necessary as we are already
+ in the right domain!
+ GIGC_Chunk_Run: Running for in-PET grid #           1
+ GIGC_Chunk_Run: Received new grid IM, JM, LM =          15           9
+          49
+ =================================================
+ W R F - G C   T I M E R S
+    Domain           1 (Units: s)
+ =================================================
+  => Coupler Component                       2.080
+   -- Physics & Parameterization             0.521
+   -- Diagnostics Out                        0.000
+  => GEOS-Chem Column                      183.543
+  ===> Total Chemistry                     185.623
+  => WRF                                  1051.802
+  ===> Total WRF-GC                       1237.425
+ max optd  1.3876131E+35
+ max taucldi  2.1575326E-04
+ max taucldw  1.6726750E-03
+ Switching is not necessary as we are already
+ in the right domain!
+ GIGC_Chunk_Run: Running for in-PET grid #           1
+ GIGC_Chunk_Run: Received new grid IM, JM, LM =          15           9
+          49
+ =================================================
+ W R F - G C   T I M E R S
+    Domain           1 (Units: s)
+ =================================================
+  => Coupler Component                       2.116
+   -- Physics & Parameterization             0.530
+   -- Diagnostics Out                        0.000
+  => GEOS-Chem Column                      184.618
+  ===> Total Chemistry                     186.734
+  => WRF                                  1069.921
+  ===> Total WRF-GC                       1256.656
+ max optd  1.3876131E+35
+ max taucldi  2.1932296E-04
+ max taucldw  1.6738607E-03
+ Switching is not necessary as we are already
+ in the right domain!
+ GIGC_Chunk_Run: Running for in-PET grid #           1
+ GIGC_Chunk_Run: Received new grid IM, JM, LM =          15           9
+          49
+ =================================================
+ W R F - G C   T I M E R S
+    Domain           1 (Units: s)
+ =================================================
+  => Coupler Component                       2.153
+   -- Physics & Parameterization             0.539
+   -- Diagnostics Out                        0.000
+  => GEOS-Chem Column                      185.701
+  ===> Total Chemistry                     187.854
+  => WRF                                  1088.021
+  ===> Total WRF-GC                       1275.875
+ max optd  1.3876131E+35
+ max taucldi  2.2217138E-04
+ max taucldw  1.6749058E-03
+ Switching is not necessary as we are already
+ in the right domain!
+ GIGC_Chunk_Run: Running for in-PET grid #           1
+ GIGC_Chunk_Run: Received new grid IM, JM, LM =          15           9
+          49
+ =================================================
+ W R F - G C   T I M E R S
+    Domain           1 (Units: s)
+ =================================================
+  => Coupler Component                       2.191
+   -- Physics & Parameterization             0.548
+   -- Diagnostics Out                        0.000
+  => GEOS-Chem Column                      186.778
+  ===> Total Chemistry                     188.969
+  => WRF                                  1106.080
+  ===> Total WRF-GC                       1295.049
+ max optd  1.3876131E+35
+ max taucldi  2.2439183E-04
+ max taucldw  1.6773771E-03
+ Switching is not necessary as we are already
+ in the right domain!
+ GIGC_Chunk_Run: Running for in-PET grid #           1
+ GIGC_Chunk_Run: Received new grid IM, JM, LM =          15           9
+          49
+ =================================================
+ W R F - G C   T I M E R S
+    Domain           1 (Units: s)
+ =================================================
+  => Coupler Component                       2.228
+   -- Physics & Parameterization             0.558
+   -- Diagnostics Out                        0.000
+  => GEOS-Chem Column                      187.858
+  ===> Total Chemistry                     190.086
+  => WRF                                  1124.127
+  ===> Total WRF-GC                       1314.213
+ HOURLY EMISSIONS UPDATE TIME    18000.0       0.0
+mediation_integrate: med_read_wrf_chem_emissions: Read emissions for time 2018-01-01_05:00:00
+ max optd  1.3876131E+35
+ max taucldi  2.2614610E-04
+ max taucldw  1.6834819E-03
+ Switching is not necessary as we are already
+ in the right domain!
+ GIGC_Chunk_Run: Running for in-PET grid #           1
+ GIGC_Chunk_Run: Received new grid IM, JM, LM =          15           9
+          49
+ =================================================
+ W R F - G C   T I M E R S
+    Domain           1 (Units: s)
+ =================================================
+  => Coupler Component                       2.264
+   -- Physics & Parameterization             0.568
+   -- Diagnostics Out                        0.000
+  => GEOS-Chem Column                      188.944
+  ===> Total Chemistry                     191.208
+  => WRF                                  1142.270
+  ===> Total WRF-GC                       1333.478
+ max optd  1.3876131E+35
+ max taucldi  2.2762433E-04
+ max taucldw  1.6933316E-03
+ Switching is not necessary as we are already
+ in the right domain!
+ GIGC_Chunk_Run: Running for in-PET grid #           1
+ GIGC_Chunk_Run: Received new grid IM, JM, LM =          15           9
+          49
+ =================================================
+ W R F - G C   T I M E R S
+    Domain           1 (Units: s)
+ =================================================
+  => Coupler Component                       2.300
+   -- Physics & Parameterization             0.577
+   -- Diagnostics Out                        0.000
+  => GEOS-Chem Column                      190.032
+  ===> Total Chemistry                     192.332
+  => WRF                                  1160.333
+  ===> Total WRF-GC                       1352.665
+ max optd  1.3876131E+35
+ max taucldi  2.2902188E-04
+ max taucldw  1.7048315E-03
+ Switching is not necessary as we are already
+ in the right domain!
+ GIGC_Chunk_Run: Running for in-PET grid #           1
+ GIGC_Chunk_Run: Received new grid IM, JM, LM =          15           9
+          49
+ =================================================
+ W R F - G C   T I M E R S
+    Domain           1 (Units: s)
+ =================================================
+  => Coupler Component                       2.336
+   -- Physics & Parameterization             0.586
+   -- Diagnostics Out                        0.000
+  => GEOS-Chem Column                      191.113
+  ===> Total Chemistry                     193.449
+  => WRF                                  1178.407
+  ===> Total WRF-GC                       1371.856
+ max optd  1.3876131E+35
+ max taucldi  2.3200331E-04
+ max taucldw  1.7179989E-03
+ Switching is not necessary as we are already
+ in the right domain!
+ GIGC_Chunk_Run: Running for in-PET grid #           1
+ GIGC_Chunk_Run: Received new grid IM, JM, LM =          15           9
+          49
+ =================================================
+ W R F - G C   T I M E R S
+    Domain           1 (Units: s)
+ =================================================
+  => Coupler Component                       2.374
+   -- Physics & Parameterization             0.596
+   -- Diagnostics Out                        0.000
+  => GEOS-Chem Column                      192.200
+  ===> Total Chemistry                     194.574
+  => WRF                                  1196.518
+  ===> Total WRF-GC                       1391.092
+ max optd  1.3876131E+35
+ max taucldi  2.3697970E-04
+ max taucldw  1.7328261E-03
+ Switching is not necessary as we are already
+ in the right domain!
+ GIGC_Chunk_Run: Running for in-PET grid #           1
+ GIGC_Chunk_Run: Received new grid IM, JM, LM =          15           9
+          49
+ =================================================
+ W R F - G C   T I M E R S
+    Domain           1 (Units: s)
+ =================================================
+  => Coupler Component                       2.410
+   -- Physics & Parameterization             0.605
+   -- Diagnostics Out                        0.000
+  => GEOS-Chem Column                      193.286
+  ===> Total Chemistry                     195.696
+  => WRF                                  1214.663
+  ===> Total WRF-GC                       1410.359
+ max optd  1.3876131E+35
+ max taucldi  2.4137512E-04
+ max taucldw  1.7499065E-03
+ Switching is not necessary as we are already
+ in the right domain!
+ GIGC_Chunk_Run: Running for in-PET grid #           1
+ GIGC_Chunk_Run: Received new grid IM, JM, LM =          15           9
+          49
+ =================================================
+ W R F - G C   T I M E R S
+    Domain           1 (Units: s)
+ =================================================
+  => Coupler Component                       2.448
+   -- Physics & Parameterization             0.614
+   -- Diagnostics Out                        0.000
+  => GEOS-Chem Column                      194.365
+  ===> Total Chemistry                     196.813
+  => WRF                                  1232.719
+  ===> Total WRF-GC                       1429.531
+ max optd  1.3876131E+35
+ max taucldi  2.4963391E-04
+ max taucldw  1.7989432E-03
+ Switching is not necessary as we are already
+ in the right domain!
+ GIGC_Chunk_Run: Running for in-PET grid #           1
+ GIGC_Chunk_Run: Received new grid IM, JM, LM =          15           9
+          49
+ =================================================
+ W R F - G C   T I M E R S
+    Domain           1 (Units: s)
+ =================================================
+  => Coupler Component                       2.485
+   -- Physics & Parameterization             0.623
+   -- Diagnostics Out                        0.000
+  => GEOS-Chem Column                      195.445
+  ===> Total Chemistry                     197.930
+  => WRF                                  1250.890
+  ===> Total WRF-GC                       1448.820
+ max optd  1.3876131E+35
+ max taucldi  2.5763811E-04
+ max taucldw  1.8558133E-03
+ Switching is not necessary as we are already
+ in the right domain!
+ GIGC_Chunk_Run: Running for in-PET grid #           1
+ GIGC_Chunk_Run: Received new grid IM, JM, LM =          15           9
+          49
+ =================================================
+ W R F - G C   T I M E R S
+    Domain           1 (Units: s)
+ =================================================
+  => Coupler Component                       2.523
+   -- Physics & Parameterization             0.633
+   -- Diagnostics Out                        0.000
+  => GEOS-Chem Column                      196.525
+  ===> Total Chemistry                     199.049
+  => WRF                                  1268.970
+  ===> Total WRF-GC                       1468.018
+ max optd  1.3876131E+35
+ max taucldi  2.6527466E-04
+ max taucldw  1.9159308E-03
+ Switching is not necessary as we are already
+ in the right domain!
+ GIGC_Chunk_Run: Running for in-PET grid #           1
+ GIGC_Chunk_Run: Received new grid IM, JM, LM =          15           9
+          49
+ =================================================
+ W R F - G C   T I M E R S
+    Domain           1 (Units: s)
+ =================================================
+  => Coupler Component                       2.561
+   -- Physics & Parameterization             0.642
+   -- Diagnostics Out                        0.000
+  => GEOS-Chem Column                      197.599
+  ===> Total Chemistry                     200.161
+  => WRF                                  1287.111
+  ===> Total WRF-GC                       1487.272
+ max optd  1.3876131E+35
+ max taucldi  2.7246086E-04
+ max taucldw  1.9774081E-03
+ Switching is not necessary as we are already
+ in the right domain!
+ GIGC_Chunk_Run: Running for in-PET grid #           1
+ GIGC_Chunk_Run: Received new grid IM, JM, LM =          15           9
+          49
+ =================================================
+ W R F - G C   T I M E R S
+    Domain           1 (Units: s)
+ =================================================
+  => Coupler Component                       2.599
+   -- Physics & Parameterization             0.652
+   -- Diagnostics Out                        0.000
+  => GEOS-Chem Column                      198.683
+  ===> Total Chemistry                     201.283
+  => WRF                                  1305.493
+  ===> Total WRF-GC                       1506.776
+ max optd  1.3876131E+35
+ max taucldi  2.7907715E-04
+ max taucldw  2.0371883E-03
+ Switching is not necessary as we are already
+ in the right domain!
+ GIGC_Chunk_Run: Running for in-PET grid #           1
+ GIGC_Chunk_Run: Received new grid IM, JM, LM =          15           9
+          49
+ =================================================
+ W R F - G C   T I M E R S
+    Domain           1 (Units: s)
+ =================================================
+  => Coupler Component                       2.638
+   -- Physics & Parameterization             0.661
+   -- Diagnostics Out                        0.000
+  => GEOS-Chem Column                      199.765
+  ===> Total Chemistry                     202.402
+  => WRF                                  1323.595
+  ===> Total WRF-GC                       1525.997
+ max optd  1.3876131E+35
+ max taucldi  2.8515965E-04
+ max taucldw  2.0922986E-03
+ Switching is not necessary as we are already
+ in the right domain!
+ GIGC_Chunk_Run: Running for in-PET grid #           1
+ GIGC_Chunk_Run: Received new grid IM, JM, LM =          15           9
+          49
+ =================================================
+ W R F - G C   T I M E R S
+    Domain           1 (Units: s)
+ =================================================
+  => Coupler Component                       2.673
+   -- Physics & Parameterization             0.671
+   -- Diagnostics Out                        0.000
+  => GEOS-Chem Column                      200.840
+  ===> Total Chemistry                     203.513
+  => WRF                                  1341.687
+  ===> Total WRF-GC                       1545.200
+ HOURLY EMISSIONS UPDATE TIME    21600.0       0.0
+mediation_integrate: med_read_wrf_chem_emissions: Read emissions for time 2018-01-01_06:00:00
+ max optd  1.3876131E+35
+ max taucldi  2.9339426E-04
+ max taucldw  2.1393821E-03
+ Switching is not necessary as we are already
+ in the right domain!
+ GIGC_Chunk_Run: Running for in-PET grid #           1
+ GIGC_Chunk_Run: Received new grid IM, JM, LM =          15           9
+          49
+ =================================================
+ W R F - G C   T I M E R S
+    Domain           1 (Units: s)
+ =================================================
+  => Coupler Component                       2.713
+   -- Physics & Parameterization             0.681
+   -- Diagnostics Out                        0.000
+  => GEOS-Chem Column                      201.920
+  ===> Total Chemistry                     204.633
+  => WRF                                  1800.341
+  ===> Total WRF-GC                       2004.974
+ max optd  1.3876131E+35
+ max taucldi  3.0291997E-04
+ max taucldw  2.1791300E-03
+ Switching is not necessary as we are already
+ in the right domain!
+ GIGC_Chunk_Run: Running for in-PET grid #           1
+ GIGC_Chunk_Run: Received new grid IM, JM, LM =          15           9
+          49
+ =================================================
+ W R F - G C   T I M E R S
+    Domain           1 (Units: s)
+ =================================================
+  => Coupler Component                       2.752
+   -- Physics & Parameterization             0.690
+   -- Diagnostics Out                        0.000
+  => GEOS-Chem Column                      203.004
+  ===> Total Chemistry                     205.756
+  => WRF                                  1818.447
+  ===> Total WRF-GC                       2024.204
+ max optd  1.3876131E+35
+ max taucldi  3.1218669E-04
+ max taucldw  2.2154951E-03
+ Switching is not necessary as we are already
+ in the right domain!
+ GIGC_Chunk_Run: Running for in-PET grid #           1
+ GIGC_Chunk_Run: Received new grid IM, JM, LM =          15           9
+          49
+ =================================================
+ W R F - G C   T I M E R S
+    Domain           1 (Units: s)
+ =================================================
+  => Coupler Component                       2.791
+   -- Physics & Parameterization             0.700
+   -- Diagnostics Out                        0.000
+  => GEOS-Chem Column                      204.080
+  ===> Total Chemistry                     206.872
+  => WRF                                  1836.699
+  ===> Total WRF-GC                       2043.570
+ max optd  1.3876131E+35
+ max taucldi  3.2091179E-04
+ max taucldw  2.2494958E-03
+ Switching is not necessary as we are already
+ in the right domain!
+ GIGC_Chunk_Run: Running for in-PET grid #           1
+ GIGC_Chunk_Run: Received new grid IM, JM, LM =          15           9
+          49
+ =================================================
+ W R F - G C   T I M E R S
+    Domain           1 (Units: s)
+ =================================================
+  => Coupler Component                       2.834
+   -- Physics & Parameterization             0.709
+   -- Diagnostics Out                        0.000
+  => GEOS-Chem Column                      205.136
+  ===> Total Chemistry                     207.970
+  => WRF                                  1854.802
+  ===> Total WRF-GC                       2062.771
+ max optd  1.3876131E+35
+ max taucldi  3.2906246E-04
+ max taucldw  2.2871504E-03
+ Switching is not necessary as we are already
+ in the right domain!
+ GIGC_Chunk_Run: Running for in-PET grid #           1
+ GIGC_Chunk_Run: Received new grid IM, JM, LM =          15           9
+          49
+ =================================================
+ W R F - G C   T I M E R S
+    Domain           1 (Units: s)
+ =================================================
+  => Coupler Component                       2.871
+   -- Physics & Parameterization             0.719
+   -- Diagnostics Out                        0.000
+  => GEOS-Chem Column                      206.190
+  ===> Total Chemistry                     209.061
+  => WRF                                  1872.939
+  ===> Total WRF-GC                       2082.000
+ max optd  1.3876131E+35
+ max taucldi  3.3964039E-04
+ max taucldw  2.3358651E-03
+ Switching is not necessary as we are already
+ in the right domain!
+ GIGC_Chunk_Run: Running for in-PET grid #           1
+ GIGC_Chunk_Run: Received new grid IM, JM, LM =          15           9
+          49
+ =================================================
+ W R F - G C   T I M E R S
+    Domain           1 (Units: s)
+ =================================================
+  => Coupler Component                       2.909
+   -- Physics & Parameterization             0.729
+   -- Diagnostics Out                        0.000
+  => GEOS-Chem Column                      207.269
+  ===> Total Chemistry                     210.178
+  => WRF                                  1891.214
+  ===> Total WRF-GC                       2101.391
+ max optd  1.3876131E+35
+ max taucldi  3.4975566E-04
+ max taucldw  2.3793457E-03
+ Switching is not necessary as we are already
+ in the right domain!
+ GIGC_Chunk_Run: Running for in-PET grid #           1
+ GIGC_Chunk_Run: Received new grid IM, JM, LM =          15           9
+          49
+ =================================================
+ W R F - G C   T I M E R S
+    Domain           1 (Units: s)
+ =================================================
+  => Coupler Component                       2.945
+   -- Physics & Parameterization             0.739
+   -- Diagnostics Out                        0.000
+  => GEOS-Chem Column                      208.354
+  ===> Total Chemistry                     211.299
+  => WRF                                  1909.324
+  ===> Total WRF-GC                       2120.623
+ max optd  1.3876131E+35
+ max taucldi  3.5915268E-04
+ max taucldw  2.4176880E-03
+ Switching is not necessary as we are already
+ in the right domain!
+ GIGC_Chunk_Run: Running for in-PET grid #           1
+ GIGC_Chunk_Run: Received new grid IM, JM, LM =          15           9
+          49
+ =================================================
+ W R F - G C   T I M E R S
+    Domain           1 (Units: s)
+ =================================================
+  => Coupler Component                       2.985
+   -- Physics & Parameterization             0.748
+   -- Diagnostics Out                        0.000
+  => GEOS-Chem Column                      209.429
+  ===> Total Chemistry                     212.413
+  => WRF                                  1927.495
+  ===> Total WRF-GC                       2139.908
+ max optd  1.3876131E+35
+ max taucldi  3.6772279E-04
+ max taucldw  2.4507060E-03
+ Switching is not necessary as we are already
+ in the right domain!
+ GIGC_Chunk_Run: Running for in-PET grid #           1
+ GIGC_Chunk_Run: Received new grid IM, JM, LM =          15           9
+          49
+ =================================================
+ W R F - G C   T I M E R S
+    Domain           1 (Units: s)
+ =================================================
+  => Coupler Component                       3.020
+   -- Physics & Parameterization             0.757
+   -- Diagnostics Out                        0.000
+  => GEOS-Chem Column                      210.516
+  ===> Total Chemistry                     213.536
+  => WRF                                  1945.819
+  ===> Total WRF-GC                       2159.354
+ max optd  1.3876131E+35
+ max taucldi  3.7545006E-04
+ max taucldw  2.4783416E-03
+ Switching is not necessary as we are already
+ in the right domain!
+ GIGC_Chunk_Run: Running for in-PET grid #           1
+ GIGC_Chunk_Run: Received new grid IM, JM, LM =          15           9
+          49
+ =================================================
+ W R F - G C   T I M E R S
+    Domain           1 (Units: s)
+ =================================================
+  => Coupler Component                       3.058
+   -- Physics & Parameterization             0.767
+   -- Diagnostics Out                        0.000
+  => GEOS-Chem Column                      211.599
+  ===> Total Chemistry                     214.657
+  => WRF                                  1964.004
+  ===> Total WRF-GC                       2178.660
+ max optd  1.3876131E+35
+ max taucldi  3.8237125E-04
+ max taucldw  2.5006062E-03
+ Switching is not necessary as we are already
+ in the right domain!
+ GIGC_Chunk_Run: Running for in-PET grid #           1
+ GIGC_Chunk_Run: Received new grid IM, JM, LM =          15           9
+          49
+ =================================================
+ W R F - G C   T I M E R S
+    Domain           1 (Units: s)
+ =================================================
+  => Coupler Component                       3.096
+   -- Physics & Parameterization             0.776
+   -- Diagnostics Out                        0.000
+  => GEOS-Chem Column                      212.675
+  ===> Total Chemistry                     215.771
+  => WRF                                  1982.159
+  ===> Total WRF-GC                       2197.930
+ max optd  1.3876131E+35
+ max taucldi  3.8857252E-04
+ max taucldw  2.5183046E-03
+ Switching is not necessary as we are already
+ in the right domain!
+ GIGC_Chunk_Run: Running for in-PET grid #           1
+ GIGC_Chunk_Run: Received new grid IM, JM, LM =          15           9
+          49
+ =================================================
+ W R F - G C   T I M E R S
+    Domain           1 (Units: s)
+ =================================================
+  => Coupler Component                       3.133
+   -- Physics & Parameterization             0.785
+   -- Diagnostics Out                        0.000
+  => GEOS-Chem Column                      213.754
+  ===> Total Chemistry                     216.887
+  => WRF                                  2000.339
+  ===> Total WRF-GC                       2217.226
+ HOURLY EMISSIONS UPDATE TIME    25200.0       0.0
+mediation_integrate: med_read_wrf_chem_emissions: Read emissions for time 2018-01-01_07:00:00
+ max optd  1.3876131E+35
+ max taucldi  3.9414703E-04
+ max taucldw  2.5323899E-03
+ Switching is not necessary as we are already
+ in the right domain!
+ GIGC_Chunk_Run: Running for in-PET grid #           1
+ GIGC_Chunk_Run: Received new grid IM, JM, LM =          15           9
+          49
+ =================================================
+ W R F - G C   T I M E R S
+    Domain           1 (Units: s)
+ =================================================
+  => Coupler Component                       3.170
+   -- Physics & Parameterization             0.794
+   -- Diagnostics Out                        0.000
+  => GEOS-Chem Column                      214.840
+  ===> Total Chemistry                     218.010
+  => WRF                                  2018.465
+  ===> Total WRF-GC                       2236.474
+ max optd  1.3876131E+35
+ max taucldi  3.9912976E-04
+ max taucldw  2.5432298E-03
+ Switching is not necessary as we are already
+ in the right domain!
+ GIGC_Chunk_Run: Running for in-PET grid #           1
+ GIGC_Chunk_Run: Received new grid IM, JM, LM =          15           9
+          49
+ =================================================
+ W R F - G C   T I M E R S
+    Domain           1 (Units: s)
+ =================================================
+  => Coupler Component                       3.208
+   -- Physics & Parameterization             0.804
+   -- Diagnostics Out                        0.000
+  => GEOS-Chem Column                      215.924
+  ===> Total Chemistry                     219.132
+  => WRF                                  2036.541
+  ===> Total WRF-GC                       2255.673
+ max optd  1.3876131E+35
+ max taucldi  4.0353145E-04
+ max taucldw  2.5510208E-03
+ Switching is not necessary as we are already
+ in the right domain!
+ GIGC_Chunk_Run: Running for in-PET grid #           1
+ GIGC_Chunk_Run: Received new grid IM, JM, LM =          15           9
+          49
+ =================================================
+ W R F - G C   T I M E R S
+    Domain           1 (Units: s)
+ =================================================
+  => Coupler Component                       3.244
+   -- Physics & Parameterization             0.813
+   -- Diagnostics Out                        0.000
+  => GEOS-Chem Column                      217.009
+  ===> Total Chemistry                     220.253
+  => WRF                                  2054.706
+  ===> Total WRF-GC                       2274.958
+ max optd  1.3876131E+35
+ max taucldi  4.0737219E-04
+ max taucldw  2.5557976E-03
+ Switching is not necessary as we are already
+ in the right domain!
+ GIGC_Chunk_Run: Running for in-PET grid #           1
+ GIGC_Chunk_Run: Received new grid IM, JM, LM =          15           9
+          49
+ =================================================
+ W R F - G C   T I M E R S
+    Domain           1 (Units: s)
+ =================================================
+  => Coupler Component                       3.283
+   -- Physics & Parameterization             0.823
+   -- Diagnostics Out                        0.000
+  => GEOS-Chem Column                      218.088
+  ===> Total Chemistry                     221.370
+  => WRF                                  2072.881
+  ===> Total WRF-GC                       2294.252
+ max optd  1.3876131E+35
+ max taucldi  4.1070423E-04
+ max taucldw  2.5575070E-03
+ Switching is not necessary as we are already
+ in the right domain!
+ GIGC_Chunk_Run: Running for in-PET grid #           1
+ GIGC_Chunk_Run: Received new grid IM, JM, LM =          15           9
+          49
+ =================================================
+ W R F - G C   T I M E R S
+    Domain           1 (Units: s)
+ =================================================
+  => Coupler Component                       3.319
+   -- Physics & Parameterization             0.832
+   -- Diagnostics Out                        0.000
+  => GEOS-Chem Column                      219.176
+  ===> Total Chemistry                     222.494
+  => WRF                                  2090.987
+  ===> Total WRF-GC                       2313.482
+ max optd  1.3876131E+35
+ max taucldi  4.1708373E-04
+ max taucldw  2.5565207E-03
+ Switching is not necessary as we are already
+ in the right domain!
+ GIGC_Chunk_Run: Running for in-PET grid #           1
+ GIGC_Chunk_Run: Received new grid IM, JM, LM =          15           9
+          49
+ =================================================
+ W R F - G C   T I M E R S
+    Domain           1 (Units: s)
+ =================================================
+  => Coupler Component                       3.356
+   -- Physics & Parameterization             0.841
+   -- Diagnostics Out                        0.000
+  => GEOS-Chem Column                      220.261
+  ===> Total Chemistry                     223.616
+  => WRF                                  2109.134
+  ===> Total WRF-GC                       2332.750
+ max optd  1.3876131E+35
+ max taucldi  4.2520626E-04
+ max taucldw  2.5533349E-03
+ Switching is not necessary as we are already
+ in the right domain!
+ GIGC_Chunk_Run: Running for in-PET grid #           1
+ GIGC_Chunk_Run: Received new grid IM, JM, LM =          15           9
+          49
+ =================================================
+ W R F - G C   T I M E R S
+    Domain           1 (Units: s)
+ =================================================
+  => Coupler Component                       3.394
+   -- Physics & Parameterization             0.850
+   -- Diagnostics Out                        0.000
+  => GEOS-Chem Column                      221.337
+  ===> Total Chemistry                     224.730
+  => WRF                                  2127.251
+  ===> Total WRF-GC                       2351.982
+ max optd  1.3876131E+35
+ max taucldi  4.3265885E-04
+ max taucldw  2.5484539E-03
+ Switching is not necessary as we are already
+ in the right domain!
+ GIGC_Chunk_Run: Running for in-PET grid #           1
+ GIGC_Chunk_Run: Received new grid IM, JM, LM =          15           9
+          49
+ =================================================
+ W R F - G C   T I M E R S
+    Domain           1 (Units: s)
+ =================================================
+  => Coupler Component                       3.431
+   -- Physics & Parameterization             0.860
+   -- Diagnostics Out                        0.000
+  => GEOS-Chem Column                      222.417
+  ===> Total Chemistry                     225.848
+  => WRF                                  2145.358
+  ===> Total WRF-GC                       2371.206
+ max optd  1.3876131E+35
+ max taucldi  4.3945000E-04
+ max taucldw  2.5425053E-03
+ Switching is not necessary as we are already
+ in the right domain!
+ GIGC_Chunk_Run: Running for in-PET grid #           1
+ GIGC_Chunk_Run: Received new grid IM, JM, LM =          15           9
+          49
+ =================================================
+ W R F - G C   T I M E R S
+    Domain           1 (Units: s)
+ =================================================
+  => Coupler Component                       3.469
+   -- Physics & Parameterization             0.869
+   -- Diagnostics Out                        0.000
+  => GEOS-Chem Column                      223.501
+  ===> Total Chemistry                     226.971
+  => WRF                                  2163.476
+  ===> Total WRF-GC                       2390.447
+ max optd  1.3876131E+35
+ max taucldi  4.4557994E-04
+ max taucldw  2.5360917E-03
+ Switching is not necessary as we are already
+ in the right domain!
+ GIGC_Chunk_Run: Running for in-PET grid #           1
+ GIGC_Chunk_Run: Received new grid IM, JM, LM =          15           9
+          49
+ =================================================
+ W R F - G C   T I M E R S
+    Domain           1 (Units: s)
+ =================================================
+  => Coupler Component                       3.509
+   -- Physics & Parameterization             0.878
+   -- Diagnostics Out                        0.000
+  => GEOS-Chem Column                      224.576
+  ===> Total Chemistry                     228.084
+  => WRF                                  2181.670
+  ===> Total WRF-GC                       2409.754
+ max optd  1.3876131E+35
+ max taucldi  4.5101537E-04
+ max taucldw  2.5296239E-03
+ Switching is not necessary as we are already
+ in the right domain!
+ GIGC_Chunk_Run: Running for in-PET grid #           1
+ GIGC_Chunk_Run: Received new grid IM, JM, LM =          15           9
+          49
+ =================================================
+ W R F - G C   T I M E R S
+    Domain           1 (Units: s)
+ =================================================
+  => Coupler Component                       3.546
+   -- Physics & Parameterization             0.888
+   -- Diagnostics Out                        0.000
+  => GEOS-Chem Column                      225.657
+  ===> Total Chemistry                     229.203
+  => WRF                                  2199.818
+  ===> Total WRF-GC                       2429.021
+ max optd  1.3876131E+35
+ max taucldi  4.5578575E-04
+ max taucldw  2.5237186E-03
+ Switching is not necessary as we are already
+ in the right domain!
+ GIGC_Chunk_Run: Running for in-PET grid #           1
+ GIGC_Chunk_Run: Received new grid IM, JM, LM =          15           9
+          49
+ =================================================
+ W R F - G C   T I M E R S
+    Domain           1 (Units: s)
+ =================================================
+  => Coupler Component                       3.585
+   -- Physics & Parameterization             0.897
+   -- Diagnostics Out                        0.000
+  => GEOS-Chem Column                      226.737
+  ===> Total Chemistry                     230.323
+  => WRF                                  2217.977
+  ===> Total WRF-GC                       2448.299
+ HOURLY EMISSIONS UPDATE TIME    28800.0       0.0
+mediation_integrate: med_read_wrf_chem_emissions: Read emissions for time 2018-01-01_08:00:00
+ max optd  1.3876131E+35
+ max taucldi  4.6312256E-04
+ max taucldw  2.5185170E-03
+ Switching is not necessary as we are already
+ in the right domain!
+ GIGC_Chunk_Run: Running for in-PET grid #           1
+ GIGC_Chunk_Run: Received new grid IM, JM, LM =          15           9
+          49
+ =================================================
+ W R F - G C   T I M E R S
+    Domain           1 (Units: s)
+ =================================================
+  => Coupler Component                       3.623
+   -- Physics & Parameterization             0.906
+   -- Diagnostics Out                        0.000
+  => GEOS-Chem Column                      227.815
+  ===> Total Chemistry                     231.438
+  => WRF                                  2236.138
+  ===> Total WRF-GC                       2467.576
+ max optd  1.3876131E+35
+ max taucldi  4.7186573E-04
+ max taucldw  2.5140597E-03
+ Switching is not necessary as we are already
+ in the right domain!
+ GIGC_Chunk_Run: Running for in-PET grid #           1
+ GIGC_Chunk_Run: Received new grid IM, JM, LM =          15           9
+          49
+ =================================================
+ W R F - G C   T I M E R S
+    Domain           1 (Units: s)
+ =================================================
+  => Coupler Component                       3.661
+   -- Physics & Parameterization             0.915
+   -- Diagnostics Out                        0.000
+  => GEOS-Chem Column                      228.889
+  ===> Total Chemistry                     232.550
+  => WRF                                  2254.287
+  ===> Total WRF-GC                       2486.837
+ max optd  1.3876131E+35
+ max taucldi  1.9796217E-02
+ max taucldw  2.5098748E-03
+ Switching is not necessary as we are already
+ in the right domain!
+ GIGC_Chunk_Run: Running for in-PET grid #           1
+ GIGC_Chunk_Run: Received new grid IM, JM, LM =          15           9
+          49
+ =================================================
+ W R F - G C   T I M E R S
+    Domain           1 (Units: s)
+ =================================================
+  => Coupler Component                       3.701
+   -- Physics & Parameterization             0.924
+   -- Diagnostics Out                        0.000
+  => GEOS-Chem Column                      229.965
+  ===> Total Chemistry                     233.666
+  => WRF                                  2272.430
+  ===> Total WRF-GC                       2506.095
+ max optd  1.3876131E+35
+ max taucldi  4.2367715E-02
+ max taucldw  2.5053367E-03
+ Switching is not necessary as we are already
+ in the right domain!
+ GIGC_Chunk_Run: Running for in-PET grid #           1
+ GIGC_Chunk_Run: Received new grid IM, JM, LM =          15           9
+          49
+ =================================================
+ W R F - G C   T I M E R S
+    Domain           1 (Units: s)
+ =================================================
+  => Coupler Component                       3.742
+   -- Physics & Parameterization             0.934
+   -- Diagnostics Out                        0.000
+  => GEOS-Chem Column                      231.035
+  ===> Total Chemistry                     234.776
+  => WRF                                  2290.749
+  ===> Total WRF-GC                       2525.526
+ max optd  1.3876131E+35
+ max taucldi  8.0286548E-02
+ max taucldw  2.4998484E-03
+ Switching is not necessary as we are already
+ in the right domain!
+ GIGC_Chunk_Run: Running for in-PET grid #           1
+ GIGC_Chunk_Run: Received new grid IM, JM, LM =          15           9
+          49
+ =================================================
+ W R F - G C   T I M E R S
+    Domain           1 (Units: s)
+ =================================================
+  => Coupler Component                       3.781
+   -- Physics & Parameterization             0.943
+   -- Diagnostics Out                        0.000
+  => GEOS-Chem Column                      232.116
+  ===> Total Chemistry                     235.897
+  => WRF                                  2308.927
+  ===> Total WRF-GC                       2544.823
+ max optd  1.3876131E+35
+ max taucldi  0.1210546    
+ max taucldw  2.4930930E-03
+ Switching is not necessary as we are already
+ in the right domain!
+ GIGC_Chunk_Run: Running for in-PET grid #           1
+ GIGC_Chunk_Run: Received new grid IM, JM, LM =          15           9
+          49
+ =================================================
+ W R F - G C   T I M E R S
+    Domain           1 (Units: s)
+ =================================================
+  => Coupler Component                       3.818
+   -- Physics & Parameterization             0.953
+   -- Diagnostics Out                        0.000
+  => GEOS-Chem Column                      233.200
+  ===> Total Chemistry                     237.018
+  => WRF                                  2327.011
+  ===> Total WRF-GC                       2564.029
+ max optd  1.3876131E+35
+ max taucldi  0.1539882    
+ max taucldw  2.4852387E-03
+ Switching is not necessary as we are already
+ in the right domain!
+ GIGC_Chunk_Run: Running for in-PET grid #           1
+ GIGC_Chunk_Run: Received new grid IM, JM, LM =          15           9
+          49
+ =================================================
+ W R F - G C   T I M E R S
+    Domain           1 (Units: s)
+ =================================================
+  => Coupler Component                       3.859
+   -- Physics & Parameterization             0.962
+   -- Diagnostics Out                        0.000
+  => GEOS-Chem Column                      234.276
+  ===> Total Chemistry                     238.134
+  => WRF                                  2345.211
+  ===> Total WRF-GC                       2583.345
+ max optd  1.3876131E+35
+ max taucldi  0.1790932    
+ max taucldw  2.4771425E-03
+ Switching is not necessary as we are already
+ in the right domain!
+ GIGC_Chunk_Run: Running for in-PET grid #           1
+ GIGC_Chunk_Run: Received new grid IM, JM, LM =          15           9
+          49
+ =================================================
+ W R F - G C   T I M E R S
+    Domain           1 (Units: s)
+ =================================================
+  => Coupler Component                       3.897
+   -- Physics & Parameterization             0.971
+   -- Diagnostics Out                        0.000
+  => GEOS-Chem Column                      235.352
+  ===> Total Chemistry                     239.249
+  => WRF                                  2363.298
+  ===> Total WRF-GC                       2602.547
+ max optd  1.3876131E+35
+ max taucldi  0.1863770    
+ max taucldw  2.4694572E-03
+ Switching is not necessary as we are already
+ in the right domain!
+ GIGC_Chunk_Run: Running for in-PET grid #           1
+ GIGC_Chunk_Run: Received new grid IM, JM, LM =          15           9
+          49
+ =================================================
+ W R F - G C   T I M E R S
+    Domain           1 (Units: s)
+ =================================================
+  => Coupler Component                       3.933
+   -- Physics & Parameterization             0.980
+   -- Diagnostics Out                        0.000
+  => GEOS-Chem Column                      236.435
+  ===> Total Chemistry                     240.368
+  => WRF                                  2381.443
+  ===> Total WRF-GC                       2621.812
+ max optd  1.3876131E+35
+ max taucldi  0.2029448    
+ max taucldw  2.4625896E-03
+ Switching is not necessary as we are already
+ in the right domain!
+ GIGC_Chunk_Run: Running for in-PET grid #           1
+ GIGC_Chunk_Run: Received new grid IM, JM, LM =          15           9
+          49
+ =================================================
+ W R F - G C   T I M E R S
+    Domain           1 (Units: s)
+ =================================================
+  => Coupler Component                       3.972
+   -- Physics & Parameterization             0.990
+   -- Diagnostics Out                        0.000
+  => GEOS-Chem Column                      237.513
+  ===> Total Chemistry                     241.485
+  => WRF                                  2399.732
+  ===> Total WRF-GC                       2641.218
+ max optd  1.3876131E+35
+ max taucldi  0.2149204    
+ max taucldw  2.4566890E-03
+ Switching is not necessary as we are already
+ in the right domain!
+ GIGC_Chunk_Run: Running for in-PET grid #           1
+ GIGC_Chunk_Run: Received new grid IM, JM, LM =          15           9
+          49
+ =================================================
+ W R F - G C   T I M E R S
+    Domain           1 (Units: s)
+ =================================================
+  => Coupler Component                       4.011
+   -- Physics & Parameterization             0.999
+   -- Diagnostics Out                        0.000
+  => GEOS-Chem Column                      238.591
+  ===> Total Chemistry                     242.602
+  => WRF                                  2417.790
+  ===> Total WRF-GC                       2660.391
+ max optd  1.3876131E+35
+ max taucldi  0.2223853    
+ max taucldw  2.4521584E-03
+ Switching is not necessary as we are already
+ in the right domain!
+ GIGC_Chunk_Run: Running for in-PET grid #           1
+ GIGC_Chunk_Run: Received new grid IM, JM, LM =          15           9
+          49
+ =================================================
+ W R F - G C   T I M E R S
+    Domain           1 (Units: s)
+ =================================================
+  => Coupler Component                       4.056
+   -- Physics & Parameterization             1.009
+   -- Diagnostics Out                        0.000
+  => GEOS-Chem Column                      239.663
+  ===> Total Chemistry                     243.719
+  => WRF                                  2435.841
+  ===> Total WRF-GC                       2679.560
+ HOURLY EMISSIONS UPDATE TIME    32400.0       0.0
+mediation_integrate: med_read_wrf_chem_emissions: Read emissions for time 2018-01-01_09:00:00
+ max optd  1.3876131E+35
+ max taucldi  0.2361608    
+ max taucldw  2.4499353E-03
+ Switching is not necessary as we are already
+ in the right domain!
+ GIGC_Chunk_Run: Running for in-PET grid #           1
+ GIGC_Chunk_Run: Received new grid IM, JM, LM =          15           9
+          49
+ =================================================
+ W R F - G C   T I M E R S
+    Domain           1 (Units: s)
+ =================================================
+  => Coupler Component                       4.094
+   -- Physics & Parameterization             1.018
+   -- Diagnostics Out                        0.000
+  => GEOS-Chem Column                      240.745
+  ===> Total Chemistry                     244.838
+  => WRF                                  2454.012
+  ===> Total WRF-GC                       2698.850
+ max optd  1.3876131E+35
+ max taucldi  0.2433757    
+ max taucldw  2.4502934E-03
+ Switching is not necessary as we are already
+ in the right domain!
+ GIGC_Chunk_Run: Running for in-PET grid #           1
+ GIGC_Chunk_Run: Received new grid IM, JM, LM =          15           9
+          49
+ =================================================
+ W R F - G C   T I M E R S
+    Domain           1 (Units: s)
+ =================================================
+  => Coupler Component                       4.134
+   -- Physics & Parameterization             1.027
+   -- Diagnostics Out                        0.000
+  => GEOS-Chem Column                      241.821
+  ===> Total Chemistry                     245.954
+  => WRF                                  2472.081
+  ===> Total WRF-GC                       2718.036
+ max optd  1.3876131E+35
+ max taucldi  0.2375265    
+ max taucldw  2.4532147E-03
+ Switching is not necessary as we are already
+ in the right domain!
+ GIGC_Chunk_Run: Running for in-PET grid #           1
+ GIGC_Chunk_Run: Received new grid IM, JM, LM =          15           9
+          49
+ =================================================
+ W R F - G C   T I M E R S
+    Domain           1 (Units: s)
+ =================================================
+  => Coupler Component                       4.175
+   -- Physics & Parameterization             1.036
+   -- Diagnostics Out                        0.000
+  => GEOS-Chem Column                      242.892
+  ===> Total Chemistry                     247.067
+  => WRF                                  2490.200
+  ===> Total WRF-GC                       2737.267
+ max optd  1.3876131E+35
+ max taucldi  0.2385873    
+ max taucldw  2.4590099E-03
+ Switching is not necessary as we are already
+ in the right domain!
+ GIGC_Chunk_Run: Running for in-PET grid #           1
+ GIGC_Chunk_Run: Received new grid IM, JM, LM =          15           9
+          49
+ =================================================
+ W R F - G C   T I M E R S
+    Domain           1 (Units: s)
+ =================================================
+  => Coupler Component                       4.213
+   -- Physics & Parameterization             1.046
+   -- Diagnostics Out                        0.000
+  => GEOS-Chem Column                      243.973
+  ===> Total Chemistry                     248.186
+  => WRF                                  2508.379
+  ===> Total WRF-GC                       2756.565
+ max optd  1.3876131E+35
+ max taucldi  0.2430090    
+ max taucldw  2.4725073E-03
+ Switching is not necessary as we are already
+ in the right domain!
+ GIGC_Chunk_Run: Running for in-PET grid #           1
+ GIGC_Chunk_Run: Received new grid IM, JM, LM =          15           9
+          49
+ =================================================
+ W R F - G C   T I M E R S
+    Domain           1 (Units: s)
+ =================================================
+  => Coupler Component                       4.252
+   -- Physics & Parameterization             1.055
+   -- Diagnostics Out                        0.000
+  => GEOS-Chem Column                      245.046
+  ===> Total Chemistry                     249.298
+  => WRF                                  2526.559
+  ===> Total WRF-GC                       2775.857
+ max optd  1.3876131E+35
+ max taucldi  0.2535091    
+ max taucldw  2.4875689E-03
+ Switching is not necessary as we are already
+ in the right domain!
+ GIGC_Chunk_Run: Running for in-PET grid #           1
+ GIGC_Chunk_Run: Received new grid IM, JM, LM =          15           9
+          49
+ =================================================
+ W R F - G C   T I M E R S
+    Domain           1 (Units: s)
+ =================================================
+  => Coupler Component                       4.292
+   -- Physics & Parameterization             1.064
+   -- Diagnostics Out                        0.000
+  => GEOS-Chem Column                      246.124
+  ===> Total Chemistry                     250.416
+  => WRF                                  2544.722
+  ===> Total WRF-GC                       2795.138
+ max optd  1.3876131E+35
+ max taucldi  0.2653976    
+ max taucldw  2.5038978E-03
+ Switching is not necessary as we are already
+ in the right domain!
+ GIGC_Chunk_Run: Running for in-PET grid #           1
+ GIGC_Chunk_Run: Received new grid IM, JM, LM =          15           9
+          49
+ =================================================
+ W R F - G C   T I M E R S
+    Domain           1 (Units: s)
+ =================================================
+  => Coupler Component                       4.331
+   -- Physics & Parameterization             1.073
+   -- Diagnostics Out                        0.000
+  => GEOS-Chem Column                      247.205
+  ===> Total Chemistry                     251.536
+  => WRF                                  2562.931
+  ===> Total WRF-GC                       2814.467
+ max optd  1.3876131E+35
+ max taucldi  0.2629849    
+ max taucldw  2.5212548E-03
+ Switching is not necessary as we are already
+ in the right domain!
+ GIGC_Chunk_Run: Running for in-PET grid #           1
+ GIGC_Chunk_Run: Received new grid IM, JM, LM =          15           9
+          49
+ =================================================
+ W R F - G C   T I M E R S
+    Domain           1 (Units: s)
+ =================================================
+  => Coupler Component                       4.371
+   -- Physics & Parameterization             1.082
+   -- Diagnostics Out                        0.000
+  => GEOS-Chem Column                      248.289
+  ===> Total Chemistry                     252.659
+  => WRF                                  2581.043
+  ===> Total WRF-GC                       2833.703
+ max optd  1.3876131E+35
+ max taucldi  0.2503855    
+ max taucldw  2.5400005E-03
+ Switching is not necessary as we are already
+ in the right domain!
+ GIGC_Chunk_Run: Running for in-PET grid #           1
+ GIGC_Chunk_Run: Received new grid IM, JM, LM =          15           9
+          49
+ =================================================
+ W R F - G C   T I M E R S
+    Domain           1 (Units: s)
+ =================================================
+  => Coupler Component                       4.411
+   -- Physics & Parameterization             1.092
+   -- Diagnostics Out                        0.000
+  => GEOS-Chem Column                      249.362
+  ===> Total Chemistry                     253.773
+  => WRF                                  2599.147
+  ===> Total WRF-GC                       2852.921
+ max optd  1.3876131E+35
+ max taucldi  0.2530861    
+ max taucldw  2.5602961E-03
+ Switching is not necessary as we are already
+ in the right domain!
+ GIGC_Chunk_Run: Running for in-PET grid #           1
+ GIGC_Chunk_Run: Received new grid IM, JM, LM =          15           9
+          49
+ =================================================
+ W R F - G C   T I M E R S
+    Domain           1 (Units: s)
+ =================================================
+  => Coupler Component                       4.446
+   -- Physics & Parameterization             1.101
+   -- Diagnostics Out                        0.000
+  => GEOS-Chem Column                      250.441
+  ===> Total Chemistry                     254.888
+  => WRF                                  2617.396
+  ===> Total WRF-GC                       2872.284
+ max optd  1.3876131E+35
+ max taucldi  0.2583260    
+ max taucldw  2.5817826E-03
+ Switching is not necessary as we are already
+ in the right domain!
+ GIGC_Chunk_Run: Running for in-PET grid #           1
+ GIGC_Chunk_Run: Received new grid IM, JM, LM =          15           9
+          49
+ =================================================
+ W R F - G C   T I M E R S
+    Domain           1 (Units: s)
+ =================================================
+  => Coupler Component                       4.485
+   -- Physics & Parameterization             1.110
+   -- Diagnostics Out                        0.000
+  => GEOS-Chem Column                      251.522
+  ===> Total Chemistry                     256.007
+  => WRF                                  2635.542
+  ===> Total WRF-GC                       2891.549
+ max optd  1.3876131E+35
+ max taucldi  0.2708330    
+ max taucldw  2.6039211E-03
+ Switching is not necessary as we are already
+ in the right domain!
+ GIGC_Chunk_Run: Running for in-PET grid #           1
+ GIGC_Chunk_Run: Received new grid IM, JM, LM =          15           9
+          49
+ =================================================
+ W R F - G C   T I M E R S
+    Domain           1 (Units: s)
+ =================================================
+  => Coupler Component                       4.524
+   -- Physics & Parameterization             1.119
+   -- Diagnostics Out                        0.000
+  => GEOS-Chem Column                      252.595
+  ===> Total Chemistry                     257.119
+  => WRF                                  2653.675
+  ===> Total WRF-GC                       2910.794
+ HOURLY EMISSIONS UPDATE TIME    36000.0       0.0
+mediation_integrate: med_read_wrf_chem_emissions: Read emissions for time 2018-01-01_10:00:00
+ max optd  1.3876131E+35
+ max taucldi  0.2824477    
+ max taucldw  2.6263646E-03
+ Switching is not necessary as we are already
+ in the right domain!
+ GIGC_Chunk_Run: Running for in-PET grid #           1
+ GIGC_Chunk_Run: Received new grid IM, JM, LM =          15           9
+          49
+ =================================================
+ W R F - G C   T I M E R S
+    Domain           1 (Units: s)
+ =================================================
+  => Coupler Component                       4.563
+   -- Physics & Parameterization             1.128
+   -- Diagnostics Out                        0.000
+  => GEOS-Chem Column                      253.678
+  ===> Total Chemistry                     258.241
+  => WRF                                  2671.900
+  ===> Total WRF-GC                       2930.140
+ max optd  1.3876131E+35
+ max taucldi  0.2911372    
+ max taucldw  2.6493890E-03
+ Switching is not necessary as we are already
+ in the right domain!
+ GIGC_Chunk_Run: Running for in-PET grid #           1
+ GIGC_Chunk_Run: Received new grid IM, JM, LM =          15           9
+          49
+ =================================================
+ W R F - G C   T I M E R S
+    Domain           1 (Units: s)
+ =================================================
+  => Coupler Component                       4.603
+   -- Physics & Parameterization             1.137
+   -- Diagnostics Out                        0.000
+  => GEOS-Chem Column                      254.735
+  ===> Total Chemistry                     259.338
+  => WRF                                  2690.024
+  ===> Total WRF-GC                       2949.363
+ max optd  1.3876131E+35
+ max taucldi  0.2990835    
+ max taucldw  2.6733354E-03
+ Switching is not necessary as we are already
+ in the right domain!
+ GIGC_Chunk_Run: Running for in-PET grid #           1
+ GIGC_Chunk_Run: Received new grid IM, JM, LM =          15           9
+          49
+ =================================================
+ W R F - G C   T I M E R S
+    Domain           1 (Units: s)
+ =================================================
+  => Coupler Component                       4.640
+   -- Physics & Parameterization             1.146
+   -- Diagnostics Out                        0.000
+  => GEOS-Chem Column                      255.817
+  ===> Total Chemistry                     260.457
+  => WRF                                  2708.167
+  ===> Total WRF-GC                       2968.624
+ max optd  1.3876131E+35
+ max taucldi  0.3000562    
+ max taucldw  2.6981120E-03
+ Switching is not necessary as we are already
+ in the right domain!
+ GIGC_Chunk_Run: Running for in-PET grid #           1
+ GIGC_Chunk_Run: Received new grid IM, JM, LM =          15           9
+          49
+ =================================================
+ W R F - G C   T I M E R S
+    Domain           1 (Units: s)
+ =================================================
+  => Coupler Component                       4.677
+   -- Physics & Parameterization             1.155
+   -- Diagnostics Out                        0.000
+  => GEOS-Chem Column                      256.901
+  ===> Total Chemistry                     261.577
+  => WRF                                  2726.374
+  ===> Total WRF-GC                       2987.951
+ max optd  1.3876131E+35
+ max taucldi  0.2963094    
+ max taucldw  2.7233216E-03
+ Switching is not necessary as we are already
+ in the right domain!
+ GIGC_Chunk_Run: Running for in-PET grid #           1
+ GIGC_Chunk_Run: Received new grid IM, JM, LM =          15           9
+          49
+ =================================================
+ W R F - G C   T I M E R S
+    Domain           1 (Units: s)
+ =================================================
+  => Coupler Component                       4.714
+   -- Physics & Parameterization             1.164
+   -- Diagnostics Out                        0.000
+  => GEOS-Chem Column                      257.986
+  ===> Total Chemistry                     262.700
+  => WRF                                  2744.529
+  ===> Total WRF-GC                       3007.229
+ max optd  1.3876131E+35
+ max taucldi  0.2971422    
+ max taucldw  2.7481669E-03
+ Switching is not necessary as we are already
+ in the right domain!
+ GIGC_Chunk_Run: Running for in-PET grid #           1
+ GIGC_Chunk_Run: Received new grid IM, JM, LM =          15           9
+          49
+ =================================================
+ W R F - G C   T I M E R S
+    Domain           1 (Units: s)
+ =================================================
+  => Coupler Component                       4.753
+   -- Physics & Parameterization             1.173
+   -- Diagnostics Out                        0.000
+  => GEOS-Chem Column                      259.060
+  ===> Total Chemistry                     263.813
+  => WRF                                  2762.600
+  ===> Total WRF-GC                       3026.413
+ max optd  1.3876131E+35
+ max taucldi  0.3124419    
+ max taucldw  2.7721254E-03
+ Switching is not necessary as we are already
+ in the right domain!
+ GIGC_Chunk_Run: Running for in-PET grid #           1
+ GIGC_Chunk_Run: Received new grid IM, JM, LM =          15           9
+          49
+ =================================================
+ W R F - G C   T I M E R S
+    Domain           1 (Units: s)
+ =================================================
+  => Coupler Component                       4.788
+   -- Physics & Parameterization             1.182
+   -- Diagnostics Out                        0.000
+  => GEOS-Chem Column                      260.139
+  ===> Total Chemistry                     264.928
+  => WRF                                  2780.769
+  ===> Total WRF-GC                       3045.696
+ max optd  1.3876131E+35
+ max taucldi  0.3176931    
+ max taucldw  2.7950306E-03
+ Switching is not necessary as we are already
+ in the right domain!
+ GIGC_Chunk_Run: Running for in-PET grid #           1
+ GIGC_Chunk_Run: Received new grid IM, JM, LM =          15           9
+          49
+ =================================================
+ W R F - G C   T I M E R S
+    Domain           1 (Units: s)
+ =================================================
+  => Coupler Component                       4.827
+   -- Physics & Parameterization             1.191
+   -- Diagnostics Out                        0.000
+  => GEOS-Chem Column                      261.218
+  ===> Total Chemistry                     266.045
+  => WRF                                  2798.910
+  ===> Total WRF-GC                       3064.955
+ max optd  1.3876131E+35
+ max taucldi  0.3116782    
+ max taucldw  2.8168208E-03
+ Switching is not necessary as we are already
+ in the right domain!
+ GIGC_Chunk_Run: Running for in-PET grid #           1
+ GIGC_Chunk_Run: Received new grid IM, JM, LM =          15           9
+          49
+ =================================================
+ W R F - G C   T I M E R S
+    Domain           1 (Units: s)
+ =================================================
+  => Coupler Component                       4.862
+   -- Physics & Parameterization             1.200
+   -- Diagnostics Out                        0.000
+  => GEOS-Chem Column                      262.300
+  ===> Total Chemistry                     267.163
+  => WRF                                  2817.014
+  ===> Total WRF-GC                       3084.177
+ max optd  1.3876131E+35
+ max taucldi  0.2983860    
+ max taucldw  2.8369934E-03
+ Switching is not necessary as we are already
+ in the right domain!
+ GIGC_Chunk_Run: Running for in-PET grid #           1
+ GIGC_Chunk_Run: Received new grid IM, JM, LM =          15           9
+          49
+ =================================================
+ W R F - G C   T I M E R S
+    Domain           1 (Units: s)
+ =================================================
+  => Coupler Component                       4.899
+   -- Physics & Parameterization             1.209
+   -- Diagnostics Out                        0.000
+  => GEOS-Chem Column                      263.383
+  ===> Total Chemistry                     268.282
+  => WRF                                  2835.214
+  ===> Total WRF-GC                       3103.496
+ max optd  1.3876131E+35
+ max taucldi  0.2950433    
+ max taucldw  2.8548921E-03
+ Switching is not necessary as we are already
+ in the right domain!
+ GIGC_Chunk_Run: Running for in-PET grid #           1
+ GIGC_Chunk_Run: Received new grid IM, JM, LM =          15           9
+          49
+ =================================================
+ W R F - G C   T I M E R S
+    Domain           1 (Units: s)
+ =================================================
+  => Coupler Component                       4.938
+   -- Physics & Parameterization             1.218
+   -- Diagnostics Out                        0.000
+  => GEOS-Chem Column                      264.460
+  ===> Total Chemistry                     269.398
+  => WRF                                  2853.336
+  ===> Total WRF-GC                       3122.734
+ max optd  1.3876131E+35
+ max taucldi  0.3066427    
+ max taucldw  2.8701439E-03
+ Switching is not necessary as we are already
+ in the right domain!
+ GIGC_Chunk_Run: Running for in-PET grid #           1
+ GIGC_Chunk_Run: Received new grid IM, JM, LM =          15           9
+          49
+ =================================================
+ W R F - G C   T I M E R S
+    Domain           1 (Units: s)
+ =================================================
+  => Coupler Component                       4.975
+   -- Physics & Parameterization             1.227
+   -- Diagnostics Out                        0.000
+  => GEOS-Chem Column                      265.543
+  ===> Total Chemistry                     270.518
+  => WRF                                  2871.514
+  ===> Total WRF-GC                       3142.032
+ HOURLY EMISSIONS UPDATE TIME    39600.0       0.0
+mediation_integrate: med_read_wrf_chem_emissions: Read emissions for time 2018-01-01_11:00:00
+ max optd  1.3876131E+35
+ max taucldi  0.3195574    
+ max taucldw  2.8828387E-03
+ Switching is not necessary as we are already
+ in the right domain!
+ GIGC_Chunk_Run: Running for in-PET grid #           1
+ GIGC_Chunk_Run: Received new grid IM, JM, LM =          15           9
+          49
+ =================================================
+ W R F - G C   T I M E R S
+    Domain           1 (Units: s)
+ =================================================
+  => Coupler Component                       5.014
+   -- Physics & Parameterization             1.235
+   -- Diagnostics Out                        0.000
+  => GEOS-Chem Column                      266.616
+  ===> Total Chemistry                     271.630
+  => WRF                                  2889.674
+  ===> Total WRF-GC                       3161.304
+ max optd  1.3876131E+35
+ max taucldi  0.3296138    
+ max taucldw  2.8933485E-03
+ Switching is not necessary as we are already
+ in the right domain!
+ GIGC_Chunk_Run: Running for in-PET grid #           1
+ GIGC_Chunk_Run: Received new grid IM, JM, LM =          15           9
+          49
+ =================================================
+ W R F - G C   T I M E R S
+    Domain           1 (Units: s)
+ =================================================
+  => Coupler Component                       5.052
+   -- Physics & Parameterization             1.245
+   -- Diagnostics Out                        0.000
+  => GEOS-Chem Column                      267.691
+  ===> Total Chemistry                     272.743
+  => WRF                                  2907.785
+  ===> Total WRF-GC                       3180.528
+ max optd  1.3876131E+35
+ max taucldi  0.3327523    
+ max taucldw  2.9061215E-03
+ Switching is not necessary as we are already
+ in the right domain!
+ GIGC_Chunk_Run: Running for in-PET grid #           1
+ GIGC_Chunk_Run: Received new grid IM, JM, LM =          15           9
+          49
+ =================================================
+ W R F - G C   T I M E R S
+    Domain           1 (Units: s)
+ =================================================
+  => Coupler Component                       5.089
+   -- Physics & Parameterization             1.254
+   -- Diagnostics Out                        0.000
+  => GEOS-Chem Column                      268.773
+  ===> Total Chemistry                     273.861
+  => WRF                                  2926.009
+  ===> Total WRF-GC                       3199.870
+ max optd  1.3876131E+35
+ max taucldi  0.3437268    
+ max taucldw  2.9170555E-03
+ Switching is not necessary as we are already
+ in the right domain!
+ GIGC_Chunk_Run: Running for in-PET grid #           1
+ GIGC_Chunk_Run: Received new grid IM, JM, LM =          15           9
+          49
+ =================================================
+ W R F - G C   T I M E R S
+    Domain           1 (Units: s)
+ =================================================
+  => Coupler Component                       5.127
+   -- Physics & Parameterization             1.263
+   -- Diagnostics Out                        0.000
+  => GEOS-Chem Column                      269.851
+  ===> Total Chemistry                     274.978
+  => WRF                                  2944.261
+  ===> Total WRF-GC                       3219.239
+ max optd  1.3876131E+35
+ max taucldi  0.3539887    
+ max taucldw  2.9246490E-03
+ Switching is not necessary as we are already
+ in the right domain!
+ GIGC_Chunk_Run: Running for in-PET grid #           1
+ GIGC_Chunk_Run: Received new grid IM, JM, LM =          15           9
+          49
+ =================================================
+ W R F - G C   T I M E R S
+    Domain           1 (Units: s)
+ =================================================
+  => Coupler Component                       5.164
+   -- Physics & Parameterization             1.272
+   -- Diagnostics Out                        0.000
+  => GEOS-Chem Column                      270.927
+  ===> Total Chemistry                     276.091
+  => WRF                                  2962.655
+  ===> Total WRF-GC                       3238.746
+ max optd  1.3876131E+35
+ max taucldi  0.3699067    
+ max taucldw  2.9291105E-03
+ Switching is not necessary as we are already
+ in the right domain!
+ GIGC_Chunk_Run: Running for in-PET grid #           1
+ GIGC_Chunk_Run: Received new grid IM, JM, LM =          15           9
+          49
+ =================================================
+ W R F - G C   T I M E R S
+    Domain           1 (Units: s)
+ =================================================
+  => Coupler Component                       5.204
+   -- Physics & Parameterization             1.281
+   -- Diagnostics Out                        0.000
+  => GEOS-Chem Column                      271.995
+  ===> Total Chemistry                     277.198
+  => WRF                                  2981.032
+  ===> Total WRF-GC                       3258.230
+ max optd  1.3876131E+35
+ max taucldi  0.3888137    
+ max taucldw  2.9310698E-03
+ Switching is not necessary as we are already
+ in the right domain!
+ GIGC_Chunk_Run: Running for in-PET grid #           1
+ GIGC_Chunk_Run: Received new grid IM, JM, LM =          15           9
+          49
+ =================================================
+ W R F - G C   T I M E R S
+    Domain           1 (Units: s)
+ =================================================
+  => Coupler Component                       5.240
+   -- Physics & Parameterization             1.290
+   -- Diagnostics Out                        0.000
+  => GEOS-Chem Column                      273.072
+  ===> Total Chemistry                     278.312
+  => WRF                                  2999.560
+  ===> Total WRF-GC                       3277.873
+ max optd  1.3876131E+35
+ max taucldi  0.4049567    
+ max taucldw  2.9312752E-03
+ Switching is not necessary as we are already
+ in the right domain!
+ GIGC_Chunk_Run: Running for in-PET grid #           1
+ GIGC_Chunk_Run: Received new grid IM, JM, LM =          15           9
+          49
+ =================================================
+ W R F - G C   T I M E R S
+    Domain           1 (Units: s)
+ =================================================
+  => Coupler Component                       5.277
+   -- Physics & Parameterization             1.299
+   -- Diagnostics Out                        0.000
+  => GEOS-Chem Column                      274.154
+  ===> Total Chemistry                     279.431
+  => WRF                                  3018.104
+  ===> Total WRF-GC                       3297.535
+ max optd  1.3876131E+35
+ max taucldi  0.4163279    
+ max taucldw  2.9301837E-03
+ Switching is not necessary as we are already
+ in the right domain!
+ GIGC_Chunk_Run: Running for in-PET grid #           1
+ GIGC_Chunk_Run: Received new grid IM, JM, LM =          15           9
+          49
+ =================================================
+ W R F - G C   T I M E R S
+    Domain           1 (Units: s)
+ =================================================
+  => Coupler Component                       5.314
+   -- Physics & Parameterization             1.308
+   -- Diagnostics Out                        0.000
+  => GEOS-Chem Column                      275.235
+  ===> Total Chemistry                     280.548
+  => WRF                                  3036.770
+  ===> Total WRF-GC                       3317.319
+ max optd  1.3876131E+35
+ max taucldi  0.4237678    
+ max taucldw  2.9334628E-03
+ Switching is not necessary as we are already
+ in the right domain!
+ GIGC_Chunk_Run: Running for in-PET grid #           1
+ GIGC_Chunk_Run: Received new grid IM, JM, LM =          15           9
+          49
+ =================================================
+ W R F - G C   T I M E R S
+    Domain           1 (Units: s)
+ =================================================
+  => Coupler Component                       5.351
+   -- Physics & Parameterization             1.317
+   -- Diagnostics Out                        0.000
+  => GEOS-Chem Column                      276.318
+  ===> Total Chemistry                     281.669
+  => WRF                                  3055.653
+  ===> Total WRF-GC                       3337.323
+ max optd  1.3876131E+35
+ max taucldi  0.4268389    
+ max taucldw  2.9376328E-03
+ Switching is not necessary as we are already
+ in the right domain!
+ GIGC_Chunk_Run: Running for in-PET grid #           1
+ GIGC_Chunk_Run: Received new grid IM, JM, LM =          15           9
+          49
+ =================================================
+ W R F - G C   T I M E R S
+    Domain           1 (Units: s)
+ =================================================
+  => Coupler Component                       5.387
+   -- Physics & Parameterization             1.326
+   -- Diagnostics Out                        0.000
+  => GEOS-Chem Column                      277.395
+  ===> Total Chemistry                     282.782
+  => WRF                                  3074.436
+  ===> Total WRF-GC                       3357.217
+ max optd  1.3876131E+35
+ max taucldi  0.4317928    
+ max taucldw  2.9423784E-03
+ Switching is not necessary as we are already
+ in the right domain!
+ GIGC_Chunk_Run: Running for in-PET grid #           1
+ GIGC_Chunk_Run: Received new grid IM, JM, LM =          15           9
+          49
+ =================================================
+ W R F - G C   T I M E R S
+    Domain           1 (Units: s)
+ =================================================
+  => Coupler Component                       5.421
+   -- Physics & Parameterization             1.335
+   -- Diagnostics Out                        0.000
+  => GEOS-Chem Column                      278.468
+  ===> Total Chemistry                     283.889
+  => WRF                                  3093.163
+  ===> Total WRF-GC                       3377.052
+d01 2018-01-01_12:00:00 wrf: SUCCESS COMPLETE WRF
